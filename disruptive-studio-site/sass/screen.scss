@@ -5,15 +5,50 @@
 
 @import "compass/reset";
 @import "materialize";
+@import "flexbox";
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display');
+@import "font-awesome-compass";
+@import "font-awesome";
 
+// Disruptive Studios Colors
+
+// Black
+$light-gray: #3d3d3d;
+$dark-gray: #202020;
+
+// Yellow
+$light-yellow: #ffd360;
+$mid-yellow: #ffc222;
+$dark-yellow: #d7a90a;
+
+// Fonts
+$monserrat: 'Montserrat', sans-serif;
+$playfair: 'Playfair Display', serif;
+
+// Flexbox
+.flex {
+	@include flexbox();
+}
 
 /* Backgrounds */
-body {
-	background-color: black;
-}
+// body {
+// 	background-color: red;
+// }
 
 video#video-bg {
 	width: 100%;
 	height: auto;
 	position: fixed;
+	top: 0;
+}
+
+// Top Navigation
+ul#nav-mobile,
+.space-between {
+	@include justify-content(space-between);
+}
+
+.navbar-fixed nav {
+	background-color: transparent;
+	box-shadow: none;
 }
