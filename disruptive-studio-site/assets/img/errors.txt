@@ -1,0 +1,4 @@
+[11/7/2017, 6:31:10 PM] layer "We analyze,  create prototypes, share a vision, and fine tune, ": Expected end of input but "," found.
+[11/7/2017, 6:31:10 PM] layer "foodiesfeed.com_fresh-asparagus": Expected end of input but "_" found.
+[11/7/2017, 6:31:10 PM] layer "We analyze,  create prototypes, share a vision, and fine tune, ": Expected end of input but "," found.
+[11/7/2017, 6:31:10 PM] layer "Disruptive, llc +1 (407) 505.5987 hello@disruptive.studio": Unsupported extension: studio

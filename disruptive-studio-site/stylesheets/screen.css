@@ -13951,6 +13951,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 }
 
 /* line 44, ../sass/screen.scss */
+body {
+  height: 100vh;
+}
+
+/* line 48, ../sass/screen.scss */
 .video-bg-container {
   position: absolute;
   top: 0;
@@ -13961,7 +13966,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   z-index: -1;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 video#video-bg {
   /* Make video to at least 100% wide and tall */
   min-width: 100%;
@@ -13976,12 +13981,12 @@ video#video-bg {
   transform: translate(-50%, -50%);
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 nav {
   padding: 20px;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 ul#nav-mobile,
 .space-between {
   -webkit-justify-content: space-between;
@@ -13991,7 +13996,7 @@ ul#nav-mobile,
   -ms-flex-pack: space-between;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .justify-center {
   -webkit-justify-content: center;
   -moz-justify-content: center;
@@ -14000,23 +14005,23 @@ ul#nav-mobile,
   -ms-flex-pack: center;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .navbar-fixed nav {
   background-color: transparent;
   box-shadow: none;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .vert {
   flex-direction: column;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 .fixed {
   position: fixed;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .side-navs {
   position: fixed;
   height: 100%;
@@ -14025,17 +14030,17 @@ ul#nav-mobile,
   padding: 0 50px;
 }
 
-/* line 106, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .side-navs div i {
   padding: 10px 0;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .left-nav {
   left: 0;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .left-nav div {
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -14043,18 +14048,18 @@ ul#nav-mobile,
   align-items: center;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 #email-icon {
   position: absolute;
   bottom: 50px;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .right-nav {
   right: 0;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .vert-text {
   -webkit-transform: rotate(90deg) translate(50%, 50%);
   -moz-transform: rotate(90deg) translate(50%, 50%);
@@ -14066,7 +14071,7 @@ ul#nav-mobile,
   transform-origin: 100%;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 #main-title {
   height: 100vh;
   -webkit-align-items: center;
@@ -14077,19 +14082,40 @@ ul#nav-mobile,
   position: relative;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 #main-title div h1,
 #main-title div h2 {
   text-align: center;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 #main-title div h2 {
   font-size: 18px;
 }
 
 /* Bring out to front using z-index */
-/* line 146, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .z1 {
   z-index: 1;
+}
+
+/* line 157, ../sass/screen.scss */
+.modal-close {
+  position: fixed;
+  right: 50px;
+  font-size: 20px;
+}
+
+/* line 163, ../sass/screen.scss */
+#about {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  top: 0 !important;
+  background-color: black;
+}
+
+/* line 170, ../sass/screen.scss */
+#about-1 {
+  background-image: url(../assets/img/about_hero.jpg);
 }
