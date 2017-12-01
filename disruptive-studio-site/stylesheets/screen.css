@@ -13932,7 +13932,17 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 }
 
 /* line 29, ../sass/screen.scss */
-.flex {
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* line 33, ../sass/screen.scss */
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 38, ../sass/screen.scss */
+.flex, .side-navs {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -13940,16 +13950,38 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   display: flex;
 }
 
-/* Backgrounds */
-/* line 38, ../sass/screen.scss */
-video#video-bg {
-  width: 100%;
-  height: auto;
-  position: fixed;
+/* line 44, ../sass/screen.scss */
+.video-bg-container {
+  position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
+video#video-bg {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 71, ../sass/screen.scss */
+nav {
+  padding: 20px;
+}
+
+/* line 75, ../sass/screen.scss */
 ul#nav-mobile,
 .space-between {
   -webkit-justify-content: space-between;
@@ -13959,8 +13991,105 @@ ul#nav-mobile,
   -ms-flex-pack: space-between;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
+.justify-center {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+
+/* line 84, ../sass/screen.scss */
 .navbar-fixed nav {
   background-color: transparent;
   box-shadow: none;
+}
+
+/* line 89, ../sass/screen.scss */
+.vert {
+  flex-direction: column;
+}
+
+/* line 93, ../sass/screen.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 97, ../sass/screen.scss */
+.side-navs {
+  position: fixed;
+  height: 100%;
+  align-items: center;
+  top: 0;
+  padding: 0 50px;
+}
+
+/* line 106, ../sass/screen.scss */
+.side-navs div i {
+  padding: 10px 0;
+}
+
+/* line 110, ../sass/screen.scss */
+.left-nav {
+  left: 0;
+}
+
+/* line 113, ../sass/screen.scss */
+.left-nav div {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+/* line 116, ../sass/screen.scss */
+#email-icon {
+  position: absolute;
+  bottom: 50px;
+}
+
+/* line 121, ../sass/screen.scss */
+.right-nav {
+  right: 0;
+}
+
+/* line 125, ../sass/screen.scss */
+.vert-text {
+  -webkit-transform: rotate(90deg) translate(50%, 50%);
+  -moz-transform: rotate(90deg) translate(50%, 50%);
+  -ms-transform: rotate(90deg) translate(50%, 50%);
+  transform: rotate(90deg) translate(50%, 50%);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  transform-origin: 100%;
+}
+
+/* line 130, ../sass/screen.scss */
+#main-title {
+  height: 100vh;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  top: -64px;
+  position: relative;
+}
+
+/* line 136, ../sass/screen.scss */
+#main-title div h1,
+#main-title div h2 {
+  text-align: center;
+}
+
+/* line 141, ../sass/screen.scss */
+#main-title div h2 {
+  font-size: 18px;
+}
+
+/* Bring out to front using z-index */
+/* line 146, ../sass/screen.scss */
+.z1 {
+  z-index: 1;
 }

@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "materialize";
 @import "flexbox";
+@import "transform";
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display');
 @import "font-awesome-compass";
 @import "font-awesome";
@@ -22,33 +23,126 @@ $mid-yellow: #ffc222;
 $dark-yellow: #d7a90a;
 
 // Fonts
-$monserrat: 'Montserrat', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
 $playfair: 'Playfair Display', serif;
+
+.montserrat {
+	font-family: $montserrat;
+}
+
+.playfair {
+	font-family: $playfair;
+}
 
 // Flexbox
 .flex {
 	@include flexbox();
 }
 
-/* Backgrounds */
-// body {
-// 	background-color: red;
-// }
+// HOMEPAGE
+
+.video-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  z-index: -1;
+}
 
 video#video-bg {
-	width: 100%;
-	height: auto;
-	position: fixed;
-	top: 0;
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+  
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 // Top Navigation
+nav {
+	padding: 20px;
+}
+
 ul#nav-mobile,
 .space-between {
 	@include justify-content(space-between);
 }
 
+.justify-center {
+	@include justify-content(center);
+}
+
 .navbar-fixed nav {
 	background-color: transparent;
 	box-shadow: none;
+}
+
+.vert {
+	flex-direction: column;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.side-navs {
+	@extend .flex;
+    position: fixed;
+    height: 100%;
+    align-items: center;
+    top: 0;
+    padding: 0 50px;
+}
+
+.side-navs div i {
+	padding: 10px 0;
+}
+
+.left-nav {
+	left: 0;
+}
+.left-nav div {
+	@include align-items(center);
+}
+#email-icon {
+	position: absolute;
+	bottom: 50px;
+}
+
+.right-nav {
+	right: 0;
+}
+
+.vert-text {
+	@include rot-trans(90, 50%, 50%);
+	@include transform-origin(100%);
+}
+
+#main-title {
+	height: 100vh;
+    @include align-items(center);
+    top: -64px;
+    position: relative;
+}
+#main-title div h1,
+#main-title div h2 {
+	text-align: center;
+}
+
+#main-title div h2 {
+	font-size: 18px;
+}
+
+/* Bring out to front using z-index */
+.z1 {
+	z-index: 1;
 }
