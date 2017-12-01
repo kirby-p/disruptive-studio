@@ -40,9 +40,9 @@
 				<a id="email-icon" href="#"><i class="fa fa-envelope-o white-text" aria-hidden="true"></i></a>
 			</div>
 		</div>
-		<div class="side-navs right-nav">
+		<div class="side-navs right-nav z1">
 			<div class="flex vert">
-				<p class="white-text vert-text">------&nbsp;&nbsp; RETHINK THE STATUS QUO</p>
+				<a class="modal-trigger" href="#about"><p class="white-text vert-text">------&nbsp;&nbsp; RETHINK THE STATUS QUO</p></a>
 			</div>
 		</div>
 		<div id="main-title" class="flex justify-center front">
@@ -59,5 +59,22 @@
 				<source src="assets/video/Disruptive_background_video.oggtheora.ogv" type="video/ogv">
 			</video>
 		</div>
+
+		<!-- About Us Modal -->
+		<div id="about" class="modal bottom-sheet">
+			<div class="modal-content">
+			  <h4>Modal Header</h4>
+			  <p>A bunch of text</p>
+			</div>
+			<div class="modal-footer">
+			  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+		  	$(document).ready(function(){
+			    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+			    $('.modal').modal();
+			});
+		</script>
 	</body>
 </html>
