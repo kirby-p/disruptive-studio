@@ -13941,7 +13941,78 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   font-family: "Playfair Display", serif;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
+.caps {
+  text-transform: uppercase;
+}
+
+/* line 41, ../sass/screen.scss */
+.underline-short {
+  border-top: 2px solid #ffc222;
+  width: 50px;
+  margin-top: 10px;
+}
+
+/* line 47, ../sass/screen.scss */
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+/* line 52, ../sass/screen.scss */
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+/* line 57, ../sass/screen.scss */
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* line 62, ../sass/screen.scss */
+h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+/* line 67, ../sass/screen.scss */
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+/* line 72, ../sass/screen.scss */
+.about-right p {
+  margin-bottom: 100px;
+}
+
+/* line 75, ../sass/screen.scss */
+.about-right h2,
+.do-list p {
+  margin-bottom: 50px;
+}
+
+/* line 79, ../sass/screen.scss */
+.hori-line {
+  width: 50px;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+/* line 85, ../sass/screen.scss */
+.section {
+  padding: 0;
+  text-align: center;
+}
+
+/* line 90, ../sass/screen.scss */
 .flex, .side-navs {
   display: -webkit-box;
   display: -moz-box;
@@ -13950,23 +14021,30 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   display: flex;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 body {
   height: 100vh;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
+.content-wrapper {
+  padding: 0 20px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+/* line 104, ../sass/screen.scss */
 .video-bg-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   z-index: -1;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 video#video-bg {
   /* Make video to at least 100% wide and tall */
   min-width: 100%;
@@ -13981,12 +14059,12 @@ video#video-bg {
   transform: translate(-50%, -50%);
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 nav {
   padding: 20px;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 ul#nav-mobile,
 .space-between {
   -webkit-justify-content: space-between;
@@ -13996,7 +14074,7 @@ ul#nav-mobile,
   -ms-flex-pack: space-between;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .justify-center {
   -webkit-justify-content: center;
   -moz-justify-content: center;
@@ -14005,23 +14083,28 @@ ul#nav-mobile,
   -ms-flex-pack: center;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
+.navbar-fixed {
+  position: absolute;
+}
+
+/* line 147, ../sass/screen.scss */
 .navbar-fixed nav {
   background-color: transparent;
   box-shadow: none;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .vert {
   flex-direction: column;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .fixed {
   position: fixed;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .side-navs {
   position: fixed;
   height: 100%;
@@ -14030,17 +14113,17 @@ ul#nav-mobile,
   padding: 0 50px;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .side-navs div i {
   padding: 10px 0;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .left-nav {
   left: 0;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .left-nav div {
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -14048,18 +14131,26 @@ ul#nav-mobile,
   align-items: center;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 #email-icon {
   position: absolute;
   bottom: 50px;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .right-nav {
   right: 0;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
+#bottom-nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  bottom: 50px;
+}
+
+/* line 195, ../sass/screen.scss */
 .vert-text {
   -webkit-transform: rotate(90deg) translate(50%, 50%);
   -moz-transform: rotate(90deg) translate(50%, 50%);
@@ -14071,7 +14162,7 @@ ul#nav-mobile,
   transform-origin: 100%;
 }
 
-/* line 134, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 #main-title {
   height: 100vh;
   -webkit-align-items: center;
@@ -14082,40 +14173,99 @@ ul#nav-mobile,
   position: relative;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 #main-title div h1,
-#main-title div h2 {
+#main-title div h3 {
   text-align: center;
 }
 
-/* line 145, ../sass/screen.scss */
-#main-title div h2 {
-  font-size: 18px;
-}
-
 /* Bring out to front using z-index */
-/* line 150, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .z1 {
   z-index: 1;
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .modal-close {
   position: fixed;
   right: 50px;
   font-size: 20px;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 #about {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-height: none;
   top: 0 !important;
   background-color: black;
+  background-image: url(../assets/img/about_hero.jpg);
+  background-size: cover;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
+.modal .modal-content {
+  padding: 0;
+}
+
+/* line 242, ../sass/screen.scss */
 #about-1 {
-  background-image: url(../assets/img/about_hero.jpg);
+  padding-top: 200px;
+}
+
+/* line 246, ../sass/screen.scss */
+#about-top {
+  position: absolute;
+  padding: 20px;
+}
+
+/* line 250, ../sass/screen.scss */
+.about-left {
+  width: 40%;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+/* line 255, ../sass/screen.scss */
+.about-right {
+  width: 60%;
+}
+
+/* line 258, ../sass/screen.scss */
+.we-section {
+  margin-bottom: 100px;
+}
+
+/* line 261, ../sass/screen.scss */
+#lets-talk {
+  background-image: url(../assets/img/contact_box.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+/* line 268, ../sass/screen.scss */
+#lets-talk p {
+  margin-bottom: 20px;
+}
+
+/* line 271, ../sass/screen.scss */
+#lets-talk p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 274, ../sass/screen.scss */
+#contact-left {
+  width: 60%;
+  padding: 50px 50px 50px 70px;
+  text-align: justify;
+}
+
+/* line 279, ../sass/screen.scss */
+#contact-right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

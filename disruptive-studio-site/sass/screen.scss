@@ -34,6 +34,58 @@ $playfair: 'Playfair Display', serif;
 	font-family: $playfair;
 }
 
+.caps {
+	text-transform: uppercase;
+}
+
+.underline-short {
+	border-top: 2px solid $mid-yellow;
+	width: 50px;
+	margin-top: 10px;
+}
+
+h1 {
+	font-family: $playfair;
+	font-size: 70px;
+	line-height: 70px;
+}
+h2 {
+	font-family: $playfair;
+	font-size: 40px;
+	line-height: 40px;
+}
+h3 {
+	font-family: $montserrat;
+	font-size: 18px;
+	line-height: 30px;
+}
+h4 {
+	font-family: $playfair;
+	font-size: 30px;
+	line-height: 30px;
+}
+p {
+	font-family: $montserrat;
+	font-size: 15px;
+	line-height: 30px;
+}
+.about-right p {
+    margin-bottom: 100px;
+}
+.about-right h2, 
+.do-list p {
+	margin-bottom: 50px;
+}
+.hori-line {
+	width: 50px;
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+}
+
+.section {
+	padding: 0;
+	text-align: center;
+}
 // Flexbox
 .flex {
 	@include flexbox();
@@ -44,13 +96,17 @@ $playfair: 'Playfair Display', serif;
 body {
 	height: 100vh;
 }
-
+.content-wrapper {
+	padding: 0 20px;
+	max-width: 1920px;
+	margin: auto;
+}
 .video-bg-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%; 
+  width: 100vw;
+  height: 100vh; 
   overflow: hidden;
   z-index: -1;
 }
@@ -71,7 +127,7 @@ video#video-bg {
   transform: translate(-50%,-50%);
 }
 
-// Top Navigation
+// Navigation
 nav {
 	padding: 20px;
 }
@@ -85,6 +141,9 @@ ul#nav-mobile,
 	@include justify-content(center);
 }
 
+.navbar-fixed {
+	position: absolute;
+}
 .navbar-fixed nav {
 	background-color: transparent;
 	box-shadow: none;
@@ -126,6 +185,13 @@ ul#nav-mobile,
 	right: 0;
 }
 
+#bottom-nav {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	bottom: 50px;
+}
+
 .vert-text {
 	@include rot-trans(90, 50%, 50%);
 	@include transform-origin(100%);
@@ -138,13 +204,13 @@ ul#nav-mobile,
     position: relative;
 }
 #main-title div h1,
-#main-title div h2 {
+#main-title div h3 {
 	text-align: center;
 }
 
-#main-title div h2 {
-	font-size: 18px;
-}
+// #main-title div h3 {
+// 	font-size: 18px;
+// }
 
 /* Bring out to front using z-index */
 .z1 {
@@ -162,11 +228,65 @@ ul#nav-mobile,
 
 #about {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	max-height: none;
 	top: 0 !important;
 	background-color: black;
+    background-image: url(../assets/img/about_hero.jpg);
+    background-size: cover;
+
+}
+.modal .modal-content {
+	padding: 0;
 }
 #about-1 {
-    background-image: url(../assets/img/about_hero.jpg);
+    // background-image: url(../assets/img/about_hero.jpg);
+    padding-top: 200px;
 }
+#about-top {
+	position: absolute;
+	padding: 20px;
+}
+.about-left {
+	width: 40%;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+.about-right {
+	width: 60%;
+}
+.we-section {
+	margin-bottom: 100px;
+}
+#lets-talk {
+	background-image: url(../assets/img/contact_box.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	color: white;
+}
+#lets-talk p {
+	margin-bottom: 20px;
+}
+#lets-talk p:last-child {
+	margin-bottom: 0;
+}
+#contact-left {
+	width: 60%;
+	padding: 50px 50px 50px 70px;
+	text-align: justify;
+}
+#contact-right {
+	width: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Case Studies
+
+// Bahaari
+// #bahaari-bg {
+// 	background-image: url(../assets/img/bahaari_hero.jpg);
+// 	height: 100vh;
+// }
