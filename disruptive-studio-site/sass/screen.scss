@@ -52,7 +52,7 @@ h1 {
 h2 {
 	font-family: $playfair;
 	font-size: 40px;
-	line-height: 40px;
+	line-height: 45px;
 }
 h3 {
 	font-family: $montserrat;
@@ -82,15 +82,25 @@ p {
 	margin: 10px 0 20px;
 }
 
-.section {
-	padding: 0;
-	text-align: center;
+// .section {
+// 	padding: 0;
+// 	text-align: center;
+// }
+
+.dead-center {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
 }
 // Flexbox
 .flex {
 	@include flexbox();
 }
-
+.flex-end-items {
+	@include align-items(flex-end);
+}
 // HOMEPAGE
 
 body {
@@ -98,7 +108,7 @@ body {
 }
 .content-wrapper {
 	padding: 0 20px;
-	max-width: 1920px;
+	max-width: 1200px;
 	margin: auto;
 }
 .video-bg-container {
@@ -285,8 +295,6 @@ ul#nav-mobile,
 
 // Case Studies
 
-// Bahaari
-// #bahaari-bg {
-// 	background-image: url(../assets/img/bahaari_hero.jpg);
-// 	height: 100vh;
-// }
+.case-hero {
+	height: calc(100vh + 50px);
+}

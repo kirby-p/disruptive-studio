@@ -13964,7 +13964,7 @@ h1 {
 h2 {
   font-family: "Playfair Display", serif;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 45px;
 }
 
 /* line 57, ../sass/screen.scss */
@@ -14006,13 +14006,16 @@ p {
   margin: 10px 0 20px;
 }
 
-/* line 85, ../sass/screen.scss */
-.section {
-  padding: 0;
+/* line 90, ../sass/screen.scss */
+.dead-center {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .flex, .side-navs {
   display: -webkit-box;
   display: -moz-box;
@@ -14021,19 +14024,27 @@ p {
   display: flex;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
+.flex-end-items {
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+}
+
+/* line 106, ../sass/screen.scss */
 body {
   height: 100vh;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .content-wrapper {
   padding: 0 20px;
-  max-width: 1920px;
+  max-width: 1200px;
   margin: auto;
 }
 
-/* line 104, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .video-bg-container {
   position: absolute;
   top: 0;
@@ -14044,7 +14055,7 @@ body {
   z-index: -1;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 video#video-bg {
   /* Make video to at least 100% wide and tall */
   min-width: 100%;
@@ -14059,12 +14070,12 @@ video#video-bg {
   transform: translate(-50%, -50%);
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 nav {
   padding: 20px;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 ul#nav-mobile,
 .space-between {
   -webkit-justify-content: space-between;
@@ -14074,7 +14085,7 @@ ul#nav-mobile,
   -ms-flex-pack: space-between;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .justify-center {
   -webkit-justify-content: center;
   -moz-justify-content: center;
@@ -14083,28 +14094,28 @@ ul#nav-mobile,
   -ms-flex-pack: center;
 }
 
-/* line 144, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .navbar-fixed {
   position: absolute;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .navbar-fixed nav {
   background-color: transparent;
   box-shadow: none;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .vert {
   flex-direction: column;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .fixed {
   position: fixed;
 }
 
-/* line 160, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .side-navs {
   position: fixed;
   height: 100%;
@@ -14113,17 +14124,17 @@ ul#nav-mobile,
   padding: 0 50px;
 }
 
-/* line 169, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .side-navs div i {
   padding: 10px 0;
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .left-nav {
   left: 0;
 }
 
-/* line 176, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .left-nav div {
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -14131,18 +14142,18 @@ ul#nav-mobile,
   align-items: center;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #email-icon {
   position: absolute;
   bottom: 50px;
 }
 
-/* line 184, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .right-nav {
   right: 0;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 #bottom-nav {
   display: flex;
   width: 100%;
@@ -14150,7 +14161,7 @@ ul#nav-mobile,
   bottom: 50px;
 }
 
-/* line 195, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .vert-text {
   -webkit-transform: rotate(90deg) translate(50%, 50%);
   -moz-transform: rotate(90deg) translate(50%, 50%);
@@ -14162,7 +14173,7 @@ ul#nav-mobile,
   transform-origin: 100%;
 }
 
-/* line 200, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 #main-title {
   height: 100vh;
   -webkit-align-items: center;
@@ -14173,26 +14184,26 @@ ul#nav-mobile,
   position: relative;
 }
 
-/* line 206, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 #main-title div h1,
 #main-title div h3 {
   text-align: center;
 }
 
 /* Bring out to front using z-index */
-/* line 216, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .z1 {
   z-index: 1;
 }
 
-/* line 223, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .modal-close {
   position: fixed;
   right: 50px;
   font-size: 20px;
 }
 
-/* line 229, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 #about {
   width: 100%;
   height: 100vh;
@@ -14203,40 +14214,40 @@ ul#nav-mobile,
   background-size: cover;
 }
 
-/* line 239, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 .modal .modal-content {
   padding: 0;
 }
 
-/* line 242, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 #about-1 {
   padding-top: 200px;
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 #about-top {
   position: absolute;
   padding: 20px;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .about-left {
   width: 40%;
   padding-left: 20px;
   padding-top: 20px;
 }
 
-/* line 255, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 .about-right {
   width: 60%;
 }
 
-/* line 258, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .we-section {
   margin-bottom: 100px;
 }
 
-/* line 261, ../sass/screen.scss */
+/* line 271, ../sass/screen.scss */
 #lets-talk {
   background-image: url(../assets/img/contact_box.jpg);
   background-size: cover;
@@ -14245,27 +14256,32 @@ ul#nav-mobile,
   color: white;
 }
 
-/* line 268, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 #lets-talk p {
   margin-bottom: 20px;
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 #lets-talk p:last-child {
   margin-bottom: 0;
 }
 
-/* line 274, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 #contact-left {
   width: 60%;
   padding: 50px 50px 50px 70px;
   text-align: justify;
 }
 
-/* line 279, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 #contact-right {
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* line 298, ../sass/screen.scss */
+.case-hero {
+  height: calc(100vh + 50px);
 }

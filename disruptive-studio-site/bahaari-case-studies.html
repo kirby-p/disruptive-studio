@@ -1,4 +1,94 @@
-<!-- Bahaari -->
-<div id="bahaari-bg">
-	
-</div>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bahaari - Case Studies - Disruptive Studio</title>
+
+<!-- 		<link rel="stylesheet" href="stylesheets/screen.css">
+ -->
+		<!--Import Google Icons Font -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
+
+		<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+		<!-- Fullpage.js -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body class="black">
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bin/materialize.min.js"></script>
+		<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<!-- Nav bar -->
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper">
+					<ul id="nav-mobile" class="hide-on-med-and-down flex">
+						<!-- Home Link -->
+						<li><a href="#" class=""><img id="home" src="assets/img/icon_logo.png"></a></li>
+						<li><a class="white-text montserrat caps" href="#">WORK</a></li>
+						<li><a class="white-text montserrat caps" href="#">HIRE US</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="side-navs left-nav z1">
+			<div class="flex vert">
+				<p class="white-text vert-text">&mdash;&mdash;&nbsp;&nbsp;</p>
+				<a href="#"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter white-text" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-instagram white-text" aria-hidden="true"></i></a>
+				<a id="email-icon" href="#"><i class="fa fa-envelope-o white-text" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div id="bottom-nav" class="z1 fixed">
+			Case Studies
+		</div>
+
+		<!-- Start Case Studies page -->
+		<section class="case-hero parallax-container">
+			<div class="parallax"><img src="assets/img/bahaari_hero.jpg"></div>
+			<div class="dead-center"><img src="assets/img/bahaari_logo.png"></div>
+		</section>
+		<section class="content-wrapper" style="position: relative; height: 350px;">
+			<div class="z1 z-depth-4" style="background-color: white; padding: 50px; position: absolute; width: 600px; top: 30px;">
+				<p class="montserrat caps">Intro</p>
+				<div class="underline-short"></div>
+				<h2 style="margin: 50px 0;">Elegant identity for a brand full of character</h2>
+				<p>Bahaari<br>
+				An original brand that tells the story of human diversity through an inspirational line of accessories.<br>
+				Each of these unique, colorful pieces is handmade from the highest quality African prints and are only available as limited collections.</p>
+			</div>
+			<div style="position: absolute; top: -50px; right: 0;">
+				<img class="z-depth-4" style="height: 450px;" src="assets/img/bahaari_intro.jpg">
+			</div>
+		</section>
+		<section class="parallax-container">
+			<div class="parallax"><img src="assets/img/bahaari_stripe.jpg"></div>
+		</section>
+		<script type="text/javascript">
+		  	$(document).ready(function(){
+			    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+			    $('.modal').modal();
+			    $('.parallax').parallax();
+			    $('#fullpage').fullpage({
+			    	anchors:['page1', 'page2'],
+			    	controlArrows: false
+			    });
+			    $('#home').click(function() {
+					$.fn.fullpage.moveTo('page1', 0);
+				});
+    			$('#bahaari-nav').click(function() {
+					$.fn.fullpage.moveTo('page1', 1);
+				});
+			});
+
+		</script>
+	</body>
+</html>
