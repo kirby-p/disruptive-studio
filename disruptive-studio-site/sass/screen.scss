@@ -43,6 +43,11 @@ $playfair: 'Playfair Display', serif;
 	width: 50px;
 	margin-top: 10px;
 }
+.white-underline {
+	border-top: 2px solid white;
+	width: 50px;
+	margin-top: 10px;
+}
 
 h1 {
 	font-family: $playfair;
@@ -88,11 +93,10 @@ p {
 // }
 
 .dead-center {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
 }
 // Flexbox
 .flex {
@@ -225,6 +229,9 @@ ul#nav-mobile,
 /* Bring out to front using z-index */
 .z1 {
 	z-index: 1;
+}
+.z2 {
+	z-index: 2;
 }
 
 // About Us Section
