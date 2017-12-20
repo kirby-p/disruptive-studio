@@ -13931,98 +13931,137 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   clip: auto;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 39, ../sass/screen.scss */
+.turq {
+  background-color: #a4dad5;
+}
+
+/* line 53, ../sass/screen.scss */
+.btn, .btn-large,
+.btn-large,
+.btn:focus,
+.btn-large:focus,
+.btn-large:focus,
+.btn-floating:focus {
+  background-color: #d7a90a;
+}
+
+/* line 61, ../sass/screen.scss */
+.btn:hover, .btn-large:hover,
+.btn-large:hover {
+  background-color: #ffc222;
+}
+
+/* line 65, ../sass/screen.scss */
 .montserrat {
   font-family: "Montserrat", sans-serif;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .playfair {
   font-family: "Playfair Display", serif;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 .caps {
   text-transform: uppercase;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .underline-short {
   border-top: 2px solid #ffc222;
   width: 50px;
   margin-top: 10px;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .white-underline {
   border-top: 2px solid white;
   width: 50px;
   margin-top: 10px;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
+.white-text {
+  color: white;
+}
+
+/* line 90, ../sass/screen.scss */
+.yellow-text {
+  color: #ffc222;
+}
+
+/* line 93, ../sass/screen.scss */
 h1 {
   font-family: "Playfair Display", serif;
   font-size: 70px;
   line-height: 70px;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 h2 {
   font-family: "Playfair Display", serif;
   font-size: 40px;
   line-height: 45px;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 30px;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 h4 {
   font-family: "Playfair Display", serif;
   font-size: 30px;
   line-height: 30px;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 30px;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
+.text-shadow {
+  text-shadow: 0px 1px 2px grey;
+}
+
+/* line 121, ../sass/screen.scss */
 .about-right p {
   margin-bottom: 100px;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .about-right h2,
 .do-list p {
   margin-bottom: 50px;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
+.do-list .col.s3 {
+  text-align: center;
+}
+
+/* line 131, ../sass/screen.scss */
 .hori-line {
   width: 50px;
   line-height: 0.1em;
   margin: 10px 0 20px;
 }
 
-/* line 95, ../sass/screen.scss */
-.dead-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: inherit;
-}
-
-/* line 102, ../sass/screen.scss */
-.flex, .side-navs {
+/* line 138, ../sass/screen.scss */
+.flex {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -14030,7 +14069,7 @@ p {
   display: flex;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .flex-end-items {
   -webkit-align-items: flex-end;
   -moz-align-items: flex-end;
@@ -14038,19 +14077,46 @@ p {
   align-items: flex-end;
 }
 
-/* line 110, ../sass/screen.scss */
-body {
-  height: 100vh;
+/* line 144, ../sass/screen.scss */
+.align-items-center {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
+.dead-center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+/* line 155, ../sass/screen.scss */
+.justify-end {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+}
+
+/* line 164, ../sass/screen.scss */
 .content-wrapper {
   padding: 0 20px;
   max-width: 1200px;
   margin: auto;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .video-bg-container {
   position: absolute;
   top: 0;
@@ -14061,7 +14127,7 @@ body {
   z-index: -1;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 video#video-bg {
   /* Make video to at least 100% wide and tall */
   min-width: 100%;
@@ -14076,12 +14142,12 @@ video#video-bg {
   transform: translate(-50%, -50%);
 }
 
-/* line 145, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 nav {
   padding: 20px;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 ul#nav-mobile,
 .space-between {
   -webkit-justify-content: space-between;
@@ -14091,7 +14157,7 @@ ul#nav-mobile,
   -ms-flex-pack: space-between;
 }
 
-/* line 154, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .justify-center {
   -webkit-justify-content: center;
   -moz-justify-content: center;
@@ -14100,29 +14166,37 @@ ul#nav-mobile,
   -ms-flex-pack: center;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .navbar-fixed {
   position: absolute;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .navbar-fixed nav {
   background-color: transparent;
   box-shadow: none;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 .vert {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 .fixed {
   position: fixed;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .side-navs {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   position: fixed;
   height: 100%;
   align-items: center;
@@ -14130,17 +14204,24 @@ ul#nav-mobile,
   padding: 0 50px;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
+.side-navs i,
+.side-navs p,
+#bottom-nav p {
+  text-shadow: 0px 1px 2px grey;
+}
+
+/* line 238, ../sass/screen.scss */
 .side-navs div i {
   padding: 10px 0;
 }
 
-/* line 187, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .left-nav {
   left: 0;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .left-nav div {
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -14148,26 +14229,34 @@ ul#nav-mobile,
   align-items: center;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 #email-icon {
   position: absolute;
   bottom: 50px;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .right-nav {
   right: 0;
 }
 
-/* line 202, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 #bottom-nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   width: 100%;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -ms-flex-pack: center;
   bottom: 50px;
 }
 
-/* line 209, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .vert-text {
   -webkit-transform: rotate(90deg) translate(50%, 50%);
   -moz-transform: rotate(90deg) translate(50%, 50%);
@@ -14179,7 +14268,7 @@ ul#nav-mobile,
   transform-origin: 100%;
 }
 
-/* line 214, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 #main-title {
   height: 100vh;
   -webkit-align-items: center;
@@ -14190,31 +14279,36 @@ ul#nav-mobile,
   position: relative;
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 #main-title div h1,
 #main-title div h3 {
   text-align: center;
 }
 
 /* Bring out to front using z-index */
-/* line 230, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 .z1 {
   z-index: 1;
 }
 
-/* line 233, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 .z2 {
   z-index: 2;
 }
 
-/* line 240, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
+.z10 {
+  z-index: 10;
+}
+
+/* line 298, ../sass/screen.scss */
 .modal-close {
   position: fixed;
   right: 50px;
   font-size: 20px;
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 #about {
   width: 100%;
   height: 100vh;
@@ -14225,74 +14319,775 @@ ul#nav-mobile,
   background-size: cover;
 }
 
-/* line 256, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .modal .modal-content {
   padding: 0;
 }
 
-/* line 259, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 #about-1 {
   padding-top: 200px;
 }
 
-/* line 263, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 #about-top {
   position: absolute;
   padding: 20px;
 }
 
-/* line 267, ../sass/screen.scss */
+/* line 325, ../sass/screen.scss */
 .about-left {
   width: 40%;
   padding-left: 20px;
   padding-top: 20px;
 }
 
-/* line 272, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 .about-right {
   width: 60%;
 }
 
-/* line 275, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
 .we-section {
   margin-bottom: 100px;
 }
 
-/* line 278, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 #lets-talk {
   background-image: url(../assets/img/contact_box.jpg);
   background-size: cover;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
   color: white;
+  background-position: center;
 }
 
-/* line 285, ../sass/screen.scss */
+/* line 344, ../sass/screen.scss */
 #lets-talk p {
   margin-bottom: 20px;
 }
 
-/* line 288, ../sass/screen.scss */
+/* line 347, ../sass/screen.scss */
 #lets-talk p:last-child {
   margin-bottom: 0;
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 350, ../sass/screen.scss */
 #contact-left {
   width: 60%;
   padding: 50px 50px 50px 70px;
   text-align: justify;
 }
 
-/* line 296, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 #contact-right {
   width: 40%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -ms-flex-pack: center;
 }
 
-/* line 305, ../sass/screen.scss */
+/* line 364, ../sass/screen.scss */
 .case-hero {
   height: calc(100vh + 50px);
+}
+
+/* line 368, ../sass/screen.scss */
+#case-intro-section {
+  position: relative;
+  height: 350px;
+}
+
+/* line 372, ../sass/screen.scss */
+#case-intro-section div:first-child {
+  background-color: white;
+  padding: 50px;
+  position: absolute;
+  width: 600px;
+  top: 30px;
+}
+
+/* line 379, ../sass/screen.scss */
+#case-intro-section h2 {
+  margin: 50px 0;
+}
+
+/* line 382, ../sass/screen.scss */
+#case-intro-img {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  height: 450px;
+  width: 800px;
+  background-size: cover;
+}
+
+/* line 390, ../sass/screen.scss */
+.case-intro-bahaari {
+  background-image: url(../assets/img/bahaari_intro.jpg);
+}
+
+/* line 393, ../sass/screen.scss */
+.case-intro-iswim {
+  background-image: url(../assets/img/iswim_intro.jpeg);
+}
+
+/* line 396, ../sass/screen.scss */
+.case-intro-harvest {
+  background-image: url(../assets/img/harvest_intro.jpg);
+}
+
+/* line 399, ../sass/screen.scss */
+.case-intro-harvest {
+  background-image: url(../assets/img/appuntamento_intro.jpg);
+}
+
+/* line 402, ../sass/screen.scss */
+#logo-section {
+  height: 350px;
+}
+
+/* line 405, ../sass/screen.scss */
+#harvest-logos {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  max-width: 1400px;
+  width: 100%;
+}
+
+/* line 413, ../sass/screen.scss */
+#harvest-logos div {
+  max-width: 175px;
+  text-align: center;
+}
+
+/* line 417, ../sass/screen.scss */
+#harvest-logos img {
+  width: 100%;
+}
+
+/* line 420, ../sass/screen.scss */
+#case-info div.content-wrapper {
+  justify-content: space-between;
+  padding: 50px 0 200px;
+}
+
+/* line 424, ../sass/screen.scss */
+#case-info div.content-wrapper div {
+  width: 30%;
+  text-align: justify;
+}
+
+/* line 428, ../sass/screen.scss */
+#case-imgs.case-imgs-bahaari {
+  height: 1150px;
+}
+
+/* line 431, ../sass/screen.scss */
+#case-imgs.case-imgs-iswim,
+#case-imgs.case-imgs-harvest {
+  height: 1500px;
+}
+
+/* line 435, ../sass/screen.scss */
+#iswim-laptop {
+  max-width: 750px;
+}
+
+/* line 438, ../sass/screen.scss */
+#case-imgs .content-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  bottom: 100px;
+}
+
+/* line 444, ../sass/screen.scss */
+#case-imgs .content-wrapper div {
+  height: 400px;
+  width: 900px;
+  margin: 25px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 451, ../sass/screen.scss */
+.case-imgs-bahaari .content-wrapper div:first-child {
+  background-image: url(../assets/img/bahaari_buscard.jpg);
+}
+
+/* line 454, ../sass/screen.scss */
+.case-imgs-bahaari .content-wrapper div:nth-child(2) {
+  background-image: url(../assets/img/bahaari_letterhead.jpg);
+}
+
+/* line 457, ../sass/screen.scss */
+.case-imgs-bahaari .content-wrapper div:nth-child(3) {
+  background-image: url(../assets/img/bahaari_postcard.jpg);
+}
+
+/* line 460, ../sass/screen.scss */
+.case-imgs-iswim .content-wrapper div:first-child {
+  background-image: url(../assets/img/iswim_buscard.jpeg);
+}
+
+/* line 463, ../sass/screen.scss */
+.case-imgs-iswim .content-wrapper div:nth-child(2) {
+  background-image: url(../assets/img/iswim_letterhead.jpeg);
+}
+
+/* line 466, ../sass/screen.scss */
+.case-imgs-iswim .content-wrapper div:nth-child(3) {
+  background-image: url(../assets/img/iswim_envelope.jpeg);
+}
+
+/* line 469, ../sass/screen.scss */
+.case-imgs-harvest .content-wrapper div:first-child {
+  background-image: url(../assets/img/harvest_packaging.jpg);
+}
+
+/* line 472, ../sass/screen.scss */
+.case-imgs-harvest .content-wrapper div:nth-child(2) {
+  background-image: url(../assets/img/harvest_burger.jpeg);
+}
+
+/* line 475, ../sass/screen.scss */
+.case-imgs-harvest .content-wrapper div:nth-child(3) {
+  background-image: url(../assets/img/harvest_bags.jpeg);
+}
+
+/* line 478, ../sass/screen.scss */
+.case-imgs-harvest .content-wrapper div:nth-child(4) {
+  background-image: url(../assets/img/harvest_tshirt.jpg);
+}
+
+/* line 481, ../sass/screen.scss */
+.case-imgs-harvest .content-wrapper div:first-child {
+  background-image: url(../assets/img/appuntamento_buscard.jpg);
+}
+
+/* line 484, ../sass/screen.scss */
+.case-imgs-harvest .content-wrapper div:nth-child(2) {
+  background-image: url(../assets/img/appuntamento_menu.jpg);
+}
+
+/* line 487, ../sass/screen.scss */
+.case-imgs-harvest .content-wrapper div:nth-child(3) {
+  background-image: url(../assets/img/appuntamento_banner.jpg);
+}
+
+/* line 490, ../sass/screen.scss */
+.case-imgs-harvest .content-wrapper div:nth-child(4) {
+  background-image: url(../assets/img/appuntamento_wallpaper.jpg);
+}
+
+/* line 493, ../sass/screen.scss */
+#we-should-talk-section.we-should-talk-bahaari {
+  height: 250px;
+}
+
+/* line 496, ../sass/screen.scss */
+#we-should-talk-section.we-should-talk-iswim,
+#we-should-talk-section.we-should-talk-harvest {
+  height: 350px;
+}
+
+/* line 500, ../sass/screen.scss */
+#we-should-talk-section.we-should-talk-iswim div.flex {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+}
+
+/* line 503, ../sass/screen.scss */
+#we-should-talk-section.we-should-talk-iswim div.flex.dead-center,
+#we-should-talk-section.we-should-talk-harvest div.flex.dead-center {
+  padding-bottom: 50px;
+}
+
+/* line 507, ../sass/screen.scss */
+#we-should-talk-section div.flex.dead-center {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 510, ../sass/screen.scss */
+#parallax-product {
+  height: 80vh;
+}
+
+/* line 513, ../sass/screen.scss */
+.spacer {
+  height: 250px;
+}
+
+/* line 516, ../sass/screen.scss */
+#case-sites div.flex:first-child {
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  position: relative;
+  bottom: 100px;
+  height: 800px;
+}
+
+/* line 522, ../sass/screen.scss */
+#case-sites div:first-child div {
+  width: 500px;
+  background-size: cover;
+}
+
+/* line 526, ../sass/screen.scss */
+.case-sites-bahaari div div:first-child {
+  background-image: url(../assets/img/bahaari_homepage.jpeg);
+}
+
+/* line 529, ../sass/screen.scss */
+.case-sites-bahaari div div:nth-child(2) {
+  background-image: url(../assets/img/bahaari_store.jpeg);
+}
+
+/* line 532, ../sass/screen.scss */
+#case-sites div.flex:nth-child(2) {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 535, ../sass/screen.scss */
+#contact-text {
+  margin-right: 100px;
+}
+
+/* line 538, ../sass/screen.scss */
+#contact-social div:first-child {
+  position: relative;
+  top: 70px;
+}
+
+/* line 541, ../sass/screen.scss */
+#contact-social div div.flex.space-between {
+  width: 100px;
+  margin-top: 30px;
+}
+
+/* line 545, ../sass/screen.scss */
+#next-section {
+  position: relative;
+  height: 400px;
+}
+
+/* line 549, ../sass/screen.scss */
+#next-project-text {
+  background-color: white;
+  padding-left: 100px;
+  position: relative;
+  width: 700px;
+  top: 75px;
+  height: 375px;
+  left: 250px;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 559, ../sass/screen.scss */
+#next-project-text a {
+  width: 200px;
+}
+
+/* line 562, ../sass/screen.scss */
+#next-project-img {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 750px;
+  height: 400px;
+  background-size: cover;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* line 573, ../sass/screen.scss */
+.next-proj-iswim {
+  background-image: url(../assets/img/iswim_cover.jpg);
+}
+
+/* line 576, ../sass/screen.scss */
+.next-proj-harvest {
+  background-image: url(../assets/img/harvest_cover.jpg);
+}
+
+/* line 579, ../sass/screen.scss */
+.next-proj-appunt {
+  background-image: url(../assets/img/appuntamento_cover.jpg);
+}
+
+/* line 582, ../sass/screen.scss */
+.next-proj-bahaari {
+  background-image: url(../assets/img/bahaari_cover.jpg);
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 590, ../sass/screen.scss */
+  #lets-talk-section div.about-left {
+    width: 0;
+  }
+
+  /* line 593, ../sass/screen.scss */
+  #lets-talk-section div#lets-talk {
+    width: 100%;
+  }
+
+  /* line 596, ../sass/screen.scss */
+  p.numb-sect {
+    margin-bottom: 50px;
+  }
+
+  /* line 599, ../sass/screen.scss */
+  #about {
+    background-position: right;
+  }
+
+  /* line 602, ../sass/screen.scss */
+  #about div.modal-content section {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* line 605, ../sass/screen.scss */
+  #about div.modal-content section > div {
+    width: 100%;
+  }
+
+  /* line 608, ../sass/screen.scss */
+  #about .content-wrapper {
+    padding: 0;
+  }
+
+  /* line 611, ../sass/screen.scss */
+  .about-left {
+    padding: 0 0 50px;
+  }
+
+  /* line 614, ../sass/screen.scss */
+  #lets-talk-section {
+    margin-bottom: 0;
+  }
+
+  /* line 617, ../sass/screen.scss */
+  #lets-talk {
+    -webkit-flex-direction: column-reverse;
+    -moz-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  /* line 620, ../sass/screen.scss */
+  #contact-left,
+  #contact-right {
+    width: 100%;
+    padding: 50px;
+  }
+
+  /* line 625, ../sass/screen.scss */
+  #contact-right {
+    text-align: center;
+  }
+
+  /* line 628, ../sass/screen.scss */
+  .we-section {
+    padding: 0 50px;
+  }
+
+  /* line 631, ../sass/screen.scss */
+  .we-section:last-child {
+    padding: 0;
+  }
+
+  /* line 637, ../sass/screen.scss */
+  #case-intro-section {
+    height: 600px;
+  }
+
+  /* line 640, ../sass/screen.scss */
+  #case-intro-section div:first-child {
+    left: 0;
+    top: 220px;
+  }
+
+  /* line 644, ../sass/screen.scss */
+  #case-intro-img {
+    width: 700px;
+    height: 400px;
+  }
+
+  /* line 648, ../sass/screen.scss */
+  #case-info div.content-wrapper {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* line 651, ../sass/screen.scss */
+  #case-info div.content-wrapper div {
+    width: 100%;
+    padding: 50px 20px;
+  }
+
+  /* line 660, ../sass/screen.scss */
+  #case-imgs .content-wrapper div {
+    width: 700px;
+    height: 350px;
+  }
+
+  /* line 664, ../sass/screen.scss */
+  #parallax-product {
+    height: 500px;
+  }
+
+  /* line 667, ../sass/screen.scss */
+  #parallax-product .parallax img {
+    min-height: unset;
+    min-width: unset;
+    width: 150%;
+  }
+
+  /* line 672, ../sass/screen.scss */
+  #case-sites div.flex:first-child {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    height: 1300px;
+  }
+
+  /* line 676, ../sass/screen.scss */
+  #case-sites div:first-child div {
+    width: 100%;
+  }
+
+  /* line 680, ../sass/screen.scss */
+  #we-should-talk-section.we-should-talk-iswim div.flex.dead-center,
+  #we-should-talk-section.we-should-talk-harvest div.flex.dead-center {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 0;
+  }
+
+  /* line 685, ../sass/screen.scss */
+  #case-contact-section {
+    padding: 50px;
+  }
+
+  /* line 688, ../sass/screen.scss */
+  #case-sites div.flex:first-child div:nth-child(2) {
+    width: 0;
+  }
+
+  /* line 691, ../sass/screen.scss */
+  #next-project-img {
+    width: 700px;
+    top: 300px;
+  }
+
+  /* line 695, ../sass/screen.scss */
+  #next-project-text {
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    position: initial;
+    padding: 0;
+  }
+
+  /* line 701, ../sass/screen.scss */
+  #harvest-logos {
+    width: 90%;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 709, ../sass/screen.scss */
+  .side-navs {
+    padding: 0;
+  }
+
+  /* line 712, ../sass/screen.scss */
+  #bottom-nav {
+    bottom: 10px;
+  }
+
+  /* line 715, ../sass/screen.scss */
+  #email-icon {
+    bottom: 5px;
+  }
+
+  /* line 718, ../sass/screen.scss */
+  .case-hero .dead-center img,
+  #logo-section .dead-center img {
+    width: 75%;
+  }
+
+  /* line 722, ../sass/screen.scss */
+  #case-intro-section div:first-child {
+    width: 100%;
+  }
+
+  /* line 725, ../sass/screen.scss */
+  #case-intro-img,
+  #case-intro-section div:first-child {
+    width: 90%;
+  }
+
+  /* line 729, ../sass/screen.scss */
+  #parallax-product {
+    height: 300px;
+  }
+
+  /* line 732, ../sass/screen.scss */
+  #parallax-product .parallax img {
+    width: 170%;
+  }
+
+  /* line 735, ../sass/screen.scss */
+  #case-imgs.case-imgs-bahaari {
+    height: 750px;
+  }
+
+  /* line 738, ../sass/screen.scss */
+  #case-imgs.case-imgs-iswim {
+    height: 1000px;
+  }
+
+  /* line 741, ../sass/screen.scss */
+  #case-imgs.case-imgs-harvest {
+    height: 1050px;
+  }
+
+  /* line 744, ../sass/screen.scss */
+  #case-imgs .content-wrapper div {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* line 748, ../sass/screen.scss */
+  #case-sites div.flex:first-child,
+  #case-sites div.side-navs:first-child {
+    height: 600px;
+  }
+
+  /* line 752, ../sass/screen.scss */
+  #we-should-talk-section.we-should-talk-iswim,
+  #we-should-talk-section.we-should-talk-harvest {
+    height: 150px;
+  }
+
+  /* line 756, ../sass/screen.scss */
+  #iswim-laptop {
+    width: 400px;
+  }
+
+  /* line 759, ../sass/screen.scss */
+  #case-contact-section div.flex {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* line 762, ../sass/screen.scss */
+  #contact-text {
+    margin: 0;
+  }
+
+  /* line 765, ../sass/screen.scss */
+  #contact-social div div.flex.space-between {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  /* line 768, ../sass/screen.scss */
+  #next-project-text,
+  #next-project-img {
+    width: 100%;
+  }
+
+  /* line 772, ../sass/screen.scss */
+  #next-project-img img {
+    width: 80%;
+  }
 }

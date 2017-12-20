@@ -9,12 +9,12 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="../stylesheets/materialize.css"  media="screen,projection"/>
 
-		<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="../stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 		<!-- Fullpage.js -->
-		<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/jquery.fullPage.css" />
 
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,23 +22,23 @@
 	<body class="black">
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/bin/materialize.min.js"></script>
+		<script type="text/javascript" src="../js/bin/materialize.min.js"></script>
 		<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
-		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
 		<!-- Nav bar -->
 		<div class="navbar-fixed">
 			<nav>
 				<div class="nav-wrapper">
 					<ul id="nav-mobile" class="hide-on-med-and-down flex">
 						<!-- Home Link -->
-						<li><a href="#" class=""><img id="home" src="assets/img/icon_logo.png"></a></li>
+						<li><a href="#" class=""><img id="home" src="../assets/img/icon_logo.png"></a></li>
 						<li><a class="white-text montserrat caps" href="#">WORK</a></li>
 						<li><a class="white-text montserrat caps" href="#">HIRE US</a></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
-		<div class="side-navs left-nav z1">
+		<div class="side-navs left-nav z10">
 			<div class="flex vert">
 				<p class="white-text vert-text">&mdash;&mdash;&nbsp;&nbsp;</p>
 				<a href="#"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>
@@ -47,106 +47,109 @@
 				<a id="email-icon" href="#"><i class="fa fa-envelope-o white-text" aria-hidden="true"></i></a>
 			</div>
 		</div>
-		<div id="bottom-nav" class="z2 fixed white-text">
-			Case Studies
+		<div id="bottom-nav" class="z10 fixed white-text">
+			<p>Case Studies</p>
 		</div>
 
 		<!-- Start Case Studies page -->
 		<section class="case-hero parallax-container">
-			<div class="parallax"><img src="assets/img/bahaari_hero.jpg"></div>
-			<div class="dead-center"><img src="assets/img/bahaari_logo.png"></div>
+			<div class="parallax"><img src="../assets/img/bahaari_hero.jpg"></div>
+			<div class="dead-center"><img src="../assets/img/bahaari_logo.png"></div>
 		</section>
-		<section class="content-wrapper" style="position: relative; height: 350px;">
-			<div class="z1 z-depth-4" style="background-color: white; padding: 50px; position: absolute; width: 600px; top: 30px;">
+		<section id="case-intro-section" class="content-wrapper">
+			<div class="z1 z-depth-4">
 				<p class="montserrat caps">Intro</p>
 				<div class="underline-short"></div>
-				<h2 style="margin: 50px 0;">Elegant identity for a brand full of character</h2>
+				<h2>Elegant identity for a brand full of character</h2>
 				<p>Bahaari<br>
 				An original brand that tells the story of human diversity through an inspirational line of accessories.<br>
 				Each of these unique, colorful pieces is handmade from the highest quality African prints and are only available as limited collections.</p>
 			</div>
-			<div class="z-depth-4" style="position: absolute; top: -50px; right: 0;height: 450px;width: 800px; background-image: url(assets/img/bahaari_intro.jpg); background-size: cover;">
+			<div id="case-intro-img" class="z-depth-4 case-intro-bahaari">
 			</div>
 		</section>
 		<section class="parallax-container">
-			<div class="parallax"><img src="assets/img/bahaari_stripe.jpg"></div>
+			<div class="parallax"><img src="../assets/img/bahaari_stripe.jpg"></div>
 		</section>
-		<section style="height: 350px;">
-			<div class="dead-center"><img src="assets/img/bahaari_logo.png"></div>
+		<section id="logo-section">
+			<div class="dead-center"><img src="../assets/img/bahaari_logo.png"></div>
 		</section>
-		<section class="white">
-			<div class="content-wrapper flex" style="justify-content: space-between; padding: 50px 0 200px;">
-				<div style="width: 30%; text-align: justify;">
+		<section id="case-info" class="white">
+			<div class="content-wrapper flex">
+				<div>
 					<h4>Challenge</h4>
-					<p class="montserrat caps"><b>PROBLEM</b></p><br>
+					<p class="montserrat caps"><b>PROBLEM</b></p>
+					<br>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor felis, luctus id congue molestie, ultrices sit amet neque. Morbi luctus lacus sodales felis elementum, sit amet varius velit porttitor.</p>
 				</div>
-				<div style="width: 30%; text-align: justify;">
+				<div>
 					<h4>Thinking</h4>
 					<p class="montserrat caps"><b>Strategy</b></p><br>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor felis, luctus id congue molestie, ultrices sit amet ne@que. Morbi luctus lacus sodales felis elementum, sit amet varius velit porttitor. Aliquam vehicula urna vel elementum luctus. In eu sem non turpis feugiat tempor sit amet eget sapien. Nunc ac sem magna. </p>				
 				</div>
-				<div style="width: 30%; text-align: justify;">
+				<div>
 					<h4>Result</h4>
 					<p class="montserrat caps"><b>Experience</b></p><br>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor felis, luctus id congue molestie, ultrices sit amet ne@que. Morbi luctus lacus sodales felis elementum, sit amet varius velit porttitor. Aliquam vehicula urna vel elementum luctus. In eu sem non turpis feugiat tempor sit amet eget sapien. Nunc ac sem magna. Duis et ultricies eros</p>				
 				</div>
 			</div>
 		</section>
-		<section style="height: 1150px;">
-			<div class="content-wrapper" style="display: flex; flex-direction: column; align-items: center; position: relative; bottom: 100px;">
-				<div class="z-depth-4" style="height: 400px; width: 900px; margin: 25px 0; background-image: url(assets/img/bahaari_buscard.jpg); background-size: cover;">
+		<section id="case-imgs" class="case-imgs-bahaari">
+			<div class="content-wrapper align-items-center">
+				<div class="z-depth-4">
 				</div>
-				<div class="z-depth-4" style="height: 400px; width: 900px; margin: 25px 0; background-image: url(assets/img/bahaari_letterhead.jpg); background-size: cover;">
+				<div class="z-depth-4">
 				</div>
-				<div class="z-depth-4" style="height: 400px; width: 900px; margin: 25px 0; background-image: url(assets/img/bahaari_postcard.jpg); background-size: cover;">
+				<div class="z-depth-4">
 				</div>	
 			</div>		
 		</section>
-		<section class="white" style="height: 250px">
-			<div class="flex dead-center" style="flex-direction: column; align-items: center;">
+		<section id="we-should-talk-section" class="white we-should-talk-bahaari">
+			<div class="flex dead-center align-items-center">
 				<p class="montserrat caps">We should talk</p>
 				<div class="underline-short"></div>
 			</div>
 		</section>
-		<section class="parallax-container" style="height: 80vh;">
-			<div class="parallax"><img src="assets/img/bahaari_product.jpg"></div>
+		<section id="parallax-product" class="parallax-container">
+			<div class="parallax">
+				<img src="../assets/img/bahaari_product.jpg">
+			</div>
+		</section>
+		<section class="white spacer">
 			
 		</section>
-		<section class="white" style="height: 250px">
-			
-		</section>
-		<section class="black content-wrapper">
-			<div class="flex" style="justify-content: space-between; position: relative; bottom: 100px; height: 800px;">
-				<div class="z-depth-4" style="width: 500px;  background-image: url(assets/img/bahaari_homepage.jpeg);background-size: cover;">	
+		<section id="case-sites" class="black content-wrapper case-sites-bahaari">
+			<div class="flex">
+				<div class="z-depth-4">	
 				</div>
-				<div class="z-depth-4" style="width: 500px;  background-image: url(assets/img/bahaari_store.jpeg);background-size: cover;">	
+				<div class="z-depth-4">	
 				</div>
 			</div>
-			<div class="flex" style="flex-direction: column; align-items: center;">
-				<p class="montserrat caps"><a class="white-text" href="https://bahaari.com">Visit the site</a></p>
+			<div class="flex align-items-center">
+				<p class="montserrat caps">
+					<a class="white-text" href="https://bahaari.com">Visit the site</a>
+				</p>
 				<div class="underline-short"></div>
 			</div>
-			<div style="height: 200px;"></div>
+			<div class="spacer"></div>
 		</section>
-		<section>
-			<div class="flex" style="justify-content: center;">
-				<div style="margin-right: 100px;">
+		<section id="case-contact-section">
+			<div class="flex justify-center">
+				<div id="contact-text">
 					<p class="montserrat caps white-text">Contact</p>
 					<div class="underline-short"></div>
 					<h2 class="white-text">Say Hello, or Bonjour,<br>
 						and let's get the ball rolling.</h2>
-					<p class="white-text" style="margin-bottom: 30px;">Whatever you need, we are looking forward<br>
-						to hear from you.<br>
+					<p class="white-text" style="margin-bottom: 30px;">Whatever you need, we are looking forward to hear from you.<br>
 						<i>Yes, we have coffee!</i></p>
 					<p class="montserrat caps"><a class="white-text" href="#">Talk to us</a></p>
 					<div class="underline-short"></div>
 				</div>
-				<div>
-					<div style="position: relative; top: 70px; 	">
+				<div id="contact-social">
+					<div>
 						<p class="montserrat caps white-text">Show us the love</p>
 						<div class="white-underline"></div>
-						<div style="display: flex; justify-content: space-between; width: 100px; margin-top: 30px;">
+						<div class="flex space-between">
 							<a href="#"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>
 							<a href="#"><i class="fa fa-twitter white-text" aria-hidden="true"></i></a>
 							<a href="#"><i class="fa fa-instagram white-text" aria-hidden="true"></i></a>				
@@ -155,19 +158,21 @@
 				</div>
 			</div>
 		</section>
-		<section style="height: 250px"></section>
-		<section class="" style="position: relative; height: 400px;">
+		<section class="spacer"></section>
+		<section id="next-section">
 			<div>
-			<div class="z-depth-4 flex" style="align-items: center;background-color: white; padding-left: 100px; position: relative; width: 700px; top: 75px; height: 375px; left: 250px;">
-				<p style="text-align: center;">NEXT PROJECT<br><br>
-				2.  ISWIM<br>
-				<i>Logo, Print, Web</i></p>
-			</div>
-			<div class="z-depth-4" style="position: absolute; top: -50px; right: 0; width: 750px; height: 400px; background-image: url(assets/img/iswim_cover.jpg); background-size: cover;">
-			</div>
+				<div id="next-project-text" class="z-depth-4 flex justify-center">
+					<a class="waves-effect waves-light btn-large" href="iswim.html">NEXT PROJECT</a>
+					<!-- <p style="text-align: center;">NEXT PROJECT<br><br> -->
+					<p>2.  ISWIM<br>
+					<i>Logo, Print, Web</i></p>
+				</div>
+				<div id="next-project-img" class="z-depth-4 next-proj-iswim">
+					<img src="../assets/img/iswim_logo.png">
+				</div>
 			</div>
 		</section>
-		<section style="height: 250px"></section>
+		<section class="spacer"></section>
 		<script type="text/javascript">
 		  	$(document).ready(function(){
 			    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
