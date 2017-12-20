@@ -54,13 +54,17 @@ $default-text-shadow-blur: 2px;
 .btn-large,
 .btn:focus, 
 .btn-large:focus, 
-.btn-floating:focus {
+.btn-floating:focus,
+button:focus {
 	background-color: $dark-yellow;
 }
 
 .btn:hover, 
 .btn-large:hover {
 	background-color: $mid-yellow;
+}
+a#home-nav {
+	color: $mid-yellow;
 }
 .montserrat {
 	font-family: $montserrat;
@@ -191,6 +195,13 @@ video#video-bg {
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.showcase-imgs img {
+	width: 600px;
+	margin-bottom: 20px;
+}
+.showcase-imgs p {
+	color: white;
+}
 
 // Navigation
 nav {
@@ -260,7 +271,11 @@ ul#nav-mobile,
 	@include justify-content(center);
 	bottom: 50px;
 }
-
+#bottom-nav div {
+	@include flexbox();
+	@include justify-content(space-between);
+	width: 200px;
+}
 .vert-text {
 	@include rot-trans(90, 50%, 50%);
 	@include transform-origin(100%);
@@ -358,7 +373,9 @@ ul#nav-mobile,
 	@include align-items(center);
 	@include justify-content(center);
 }
-
+.section {
+	padding: 0;
+}
 // Case Studies
 
 .case-hero {

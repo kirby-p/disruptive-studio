@@ -53,21 +53,13 @@
 			</div>
 		</div>
 		<div id="bottom-nav" class="z1 fixed">
-			<button id="bahaari-nav">1</button>
-		</div>
-		<div id="main-title" class="flex justify-center front">
 			<div>
-				<h3 class="white-text montserrat caps">WE CREATE</h3>
-				<h1 class="white-text playfair">Branding for the <br>modern world.</h1>
+				<a id="home-nav" href="#">HOME</a>
+				<button id="bahaari-nav">1</button>
+				<button id="iswim-nav">2</button>
+				<button id="harvest-nav">3</button>
+				<button id="appunt-nav">4</button>
 			</div>
-		</div>
-
-		<div class="video-bg-container">
-			<video autoplay loop id="video-bg" muted plays-inline controls="false" data-autoplay>
-				<source src="assets/video/Disruptive_background_video.mp4" type="video/mp4">
-				<source src="assets/video/Disruptive_background_video.webmhd.webm" type="video/webm">
-				<source src="assets/video/Disruptive_background_video.oggtheora.ogv" type="video/ogv">
-			</video>
 		</div>
 
 		<!-- About Us Modal -->
@@ -159,21 +151,80 @@
 				</div>
 			</div>
 		</div>
+		<div id="fullpage">
+			<div class="section">
+				<div id="home-slide" class="slide" data-anchor="slide1">
+					
+					<div id="main-title" class="flex justify-center front">
+						<div>
+							<h3 class="white-text montserrat caps">WE CREATE</h3>
+							<h1 class="white-text playfair">Branding for the <br>modern world.</h1>
+						</div>
+					</div>
+
+					<div class="video-bg-container">
+						<video autoplay loop id="video-bg" muted plays-inline controls="false" data-autoplay>
+							<source src="assets/video/Disruptive_background_video.mp4" type="video/mp4">
+							<source src="assets/video/Disruptive_background_video.webmhd.webm" type="video/webm">
+							<source src="assets/video/Disruptive_background_video.oggtheora.ogv" type="video/ogv">
+						</video>
+					</div>
+				</div>
+				<div id="bahaari-slide" class="slide" data-anchor="slide2" style="background-image: url(assets/img/bahaari_background.jpg);">
+					<div class="dead-center showcase-imgs" style="flex-direction: column;">
+						<a href="case-studies/bahaari.html"><img src="assets/img/bahaari_cover.jpg"></a>
+						<p>1.  BAHAARI<br></p>
+						<p><i>Logo, Print, Web</i></p>
+					</div>
+				</div>
+				<div id="iswim-slide" class="slide" data-anchor="slide3" style="background-image: url(assets/img/iswim_background.jpg);">
+					<div class="dead-center showcase-imgs" style="flex-direction: column;">
+						<a href="case-studies/iswim.html"><img src="assets/img/iswim_cover.jpg"></a>
+						<p>2.  ISWIM<br></p>
+						<p><i>Logo, Print, Web</i></p>
+					</div>
+				</div>
+				<div id="harvest-slide" class="slide" data-anchor="slide4" style="background-image: url(assets/img/harvest_background.jpg);">
+					<div class="dead-center showcase-imgs" style="flex-direction: column;">
+						<a href="case-studies/harvest.html"><img src="assets/img/harvest_cover.jpg"></a>
+						<p>3.  HARVEST<br></p>
+						<p><i>Logo, Print</i></p>
+					</div>
+				</div>
+				<div id="appunt-slide" class="slide" data-anchor="slide5" style="background-image: url(assets/img/appuntamento_background.jpg);">
+					<div class="dead-center showcase-imgs" style="flex-direction: column;">
+						<a href="case-studies/appuntamento.html"><img src="assets/img/appuntamento_cover.jpg"></a>
+						<p>4.  APPUNTAMENTO<br></p>
+						<p><i>Logo, Print</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
 		  	$(document).ready(function(){
 			    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
 			    $('.modal').modal();
 			    $('parallax').parallax();
-			 //    $('#fullpage').fullpage({
-			 //    	anchors:['page1', 'page2'],
-			 //    	controlArrows: false
-			 //    });
-			 //    $('#home').click(function() {
-				// 	$.fn.fullpage.moveTo('page1', 0);
-				// });
-    // 			$('#bahaari-nav').click(function() {
-				// 	$.fn.fullpage.moveTo('page1', 1);
-				// });
+
+			    $('#fullpage').fullpage({
+			    	anchors:['page1'],
+			    	controlArrows: false
+			    });
+			    $('#home, #home-nav').click(function() {
+					$.fn.fullpage.moveTo('page1', 0);
+				});
+    			$('#bahaari-nav').click(function() {
+					$.fn.fullpage.moveTo('page1', 1);
+				});
+				$('#iswim-nav').click(function() {
+					$.fn.fullpage.moveTo('page1', 2);
+				});
+				$('#harvest-nav').click(function() {
+					$.fn.fullpage.moveTo('page1', 3);
+				});
+				$('#appunt-nav').click(function() {
+					$.fn.fullpage.moveTo('page1', 4);
+				});
 			});
 
 		</script>
