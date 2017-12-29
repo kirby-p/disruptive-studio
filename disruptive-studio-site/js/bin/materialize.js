@@ -2085,6 +2085,11 @@ if (Vel) {
         if (this.$el[0].classList.contains('bottom-sheet')) {
           Vel(this.$el[0], { bottom: 0, opacity: 1 }, enterVelocityOptions);
 
+        // Appear from right animation
+        } else if (this.$el[0].classList.contains('appear-right')) {
+          Vel.hook(this.$el[0], 'translateX', '200px');          
+          Vel(this.$el[0], { top: this.options.endingTop, opacity: 1, translateX: '0px'}, enterVelocityOptions);
+
           // Normal modal animation
         } else {
           Vel.hook(this.$el[0], 'scaleX', 0.7);
@@ -2124,6 +2129,10 @@ if (Vel) {
         // Bottom sheet animation
         if (this.$el[0].classList.contains('bottom-sheet')) {
           Vel(this.$el[0], { bottom: '-100%', opacity: 0 }, exitVelocityOptions);
+
+        // Appear from right animation
+        } else if (this.$el[0].classList.contains('appear-right')) {
+          Vel(this.$el[0], { top: this.options.startingTop, opacity: 0, translateX: '200px'}, exitVelocityOptions);
 
           // Normal modal animation
         } else {

@@ -18,7 +18,7 @@ body {
 }
 
 // Breakpoints
-$tablet-max-view: 1024px;
+$tablet-max-view: 1023px;
 $tablet-min-view: 768px;
 $mobile-max-view: 767px;
 
@@ -63,7 +63,10 @@ button:focus {
 .btn-large:hover {
 	background-color: $mid-yellow;
 }
-a#home-nav {
+a.slide-nav {
+	color: white;
+}
+a.slide-nav:focus {
 	color: $mid-yellow;
 }
 .montserrat {
@@ -129,8 +132,12 @@ p {
 .do-list p {
 	margin-bottom: 50px;
 }
-.do-list .col.s3 {
-	text-align: center;
+// .do-list .col.s3 {
+// 	text-align: center;
+// }
+.do-list {
+	@include flexbox();
+	@include justify-content(space-between);
 }
 .hori-line {
 	width: 50px;
@@ -195,10 +202,14 @@ video#video-bg {
   left: 50%;
   transform: translate(-50%,-50%);
 }
-.showcase-imgs img {
-	width: 600px;
-	margin-bottom: 20px;
+// .showcase-imgs img {
+// 	width: 600px;
+// 	margin-bottom: 20px;
+// }
+.showcase-imgs {
+	@include flex-direction(column);
 }
+
 .showcase-imgs p {
 	color: white;
 }
@@ -219,12 +230,29 @@ ul#nav-mobile,
 
 .navbar-fixed {
 	position: absolute;
+	width: 100%;
 }
-.navbar-fixed nav {
+.navbar-fixed nav,
+nav {
 	background-color: transparent;
 	box-shadow: none;
+	@include flexbox();
+	@include justify-content(center);
 }
-
+nav .nav-wrapper {
+	width: 100%;
+}
+nav,
+.side-navs.abs-pos,
+#bottom-nav.abs-pos {
+	position: absolute;
+}
+.side-navs.abs-pos {
+	height: 100vh;
+}
+#bottom-nav.abs-pos {
+	bottom: 100px;
+}
 .vert {
 	@include flex-direction(column);
 }
@@ -267,13 +295,14 @@ ul#nav-mobile,
 
 #bottom-nav {
 	@include flexbox();
-	width: 100%;
 	@include justify-content(center);
+	width: 100%;
 	bottom: 50px;
 }
 #bottom-nav div {
 	@include flexbox();
 	@include justify-content(space-between);
+	@include align-items(center);
 	width: 200px;
 }
 .vert-text {
@@ -338,12 +367,12 @@ ul#nav-mobile,
 	padding: 20px;
 }
 .about-left {
-	width: 40%;
+	width: 25%;
 	padding-left: 20px;
 	padding-top: 20px;
 }
 .about-right {
-	width: 60%;
+	width: 75%;
 }
 .we-section {
 	margin-bottom: 100px;
@@ -376,8 +405,11 @@ ul#nav-mobile,
 .section {
 	padding: 0;
 }
-// Case Studies
 
+// Case Studies
+.slide {
+	background-size: cover;
+}
 .case-hero {
 	height: calc(100vh + 50px);
 	// height: 100%;
@@ -576,16 +608,22 @@ ul#nav-mobile,
 #next-project-text a {
 	width: 200px;
 }
-#next-project-img {
-	position: absolute; 
-	top: -50px; 
-	right: 0; 
+#next-project-img,
+.case-slide-img {
 	width: 750px; 
 	height: 400px; 
 	background-size: cover;
 	@include align-items(center);
 	@include justify-content(center);
 	@include flexbox();
+}
+#next-project-img {
+	position: absolute; 
+	top: -50px; 
+	right: 0; 	
+}
+.case-slide-img {
+	margin-bottom: 30px;
 }
 .next-proj-iswim {
 	background-image: url(../assets/img/iswim_cover.jpg); 	
@@ -604,6 +642,12 @@ ul#nav-mobile,
 
 // Tablets
 @media only screen and (max-width: $tablet-max-view) {
+	.video-bg-container {
+		background-image: url(../assets/img/homepage_hero.jpg);
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	}
 	#lets-talk-section div.about-left {
 		width: 0;
 	}
@@ -723,6 +767,10 @@ ul#nav-mobile,
 
 // Mobile 
 @media only screen and (max-width: $mobile-max-view) {
+	h1 {
+		font-size: 30px;
+		line-height: 45px;
+	}
 	.side-navs {
 		padding: 0;
 	}

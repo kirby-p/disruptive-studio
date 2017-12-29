@@ -22,9 +22,11 @@
 	<body class="black">
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/bin/materialize.min.js"></script>
+		<script type="text/javascript" src="js/bin/materialize.js"></script>
 		<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="js/mob-detect.js"></script>
+
 		<!-- Nav bar -->
 		<div class="navbar-fixed">
 			<nav>
@@ -32,8 +34,8 @@
 					<ul id="nav-mobile" class="hide-on-med-and-down flex">
 						<!-- Home Link -->
 						<li><a href="#" class=""><img id="home" src="assets/img/icon_logo.png"></a></li>
-						<li><a class="white-text montserrat caps" href="#">WORK</a></li>
-						<li><a class="white-text montserrat caps" href="#">HIRE US</a></li>
+						<li><a id="work-nav" class="white-text montserrat caps" href="#!">WORK</a></li>
+						<li><a class="white-text montserrat caps" href="#!">HIRE US</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -54,16 +56,17 @@
 		</div>
 		<div id="bottom-nav" class="z1 fixed">
 			<div>
-				<a id="home-nav" href="#">HOME</a>
-				<button id="bahaari-nav">1</button>
-				<button id="iswim-nav">2</button>
-				<button id="harvest-nav">3</button>
-				<button id="appunt-nav">4</button>
+				<!-- <a id="home-nav" href="#">HOME</a> -->
+				<p class="white-text">&mdash;&mdash;</p>
+				<a id="bahaari-nav" class="slide-nav" href="#!">1.</a>
+				<a id="iswim-nav" class="slide-nav" href="#!">2.</a>
+				<a id="harvest-nav" class="slide-nav" href="#!">3.</a>
+				<a id="appunt-nav" class="slide-nav" href="#!">4.</a>
 			</div>
 		</div>
 
 		<!-- About Us Modal -->
-		<div id="about" class="modal">
+		<div id="about" class="modal appear-right">
 				<section id="about-top">
 					<i class="fa fa-times modal-close white-text" aria-hidden="true"></i>
 					<img src="assets/img/disruptive_logo_full.png">
@@ -88,19 +91,19 @@
 						<div class="about-right">					
 							<h2 class="white-text">We envision, we create, we build</h2>
 							<div class="row do-list">
-								<div class="col s3">
+								<div class="col">
 									<p class="white-text caps">Branding</p>
 									<p class="white-text caps">Web and Mobile</p>
 								</div>
-								<div class="col s3">
+								<div class="col">
 									<p class="white-text caps">Design</p>
 									<p class="white-text caps">Motion</p>
 								</div>
-								<div class="col s3">
+								<div class="col">
 									<p class="white-text caps">Advertising</p>
 									<p class="white-text caps">Photography</p>
 								</div>
-								<div class="col s3">
+								<div class="col">
 									<p class="white-text caps">Print</p>
 									<p class="white-text caps">Social Media</p>
 								</div>
@@ -163,7 +166,7 @@
 					</div>
 
 					<div class="video-bg-container">
-						<video autoplay loop id="video-bg" muted plays-inline controls="false" data-autoplay>
+						<video autoplay loop id="video-bg" muted plays-inline data-autoplay>
 							<source src="assets/video/Disruptive_background_video.mp4" type="video/mp4">
 							<source src="assets/video/Disruptive_background_video.webmhd.webm" type="video/webm">
 							<source src="assets/video/Disruptive_background_video.oggtheora.ogv" type="video/ogv">
@@ -171,29 +174,45 @@
 					</div>
 				</div>
 				<div id="bahaari-slide" class="slide" data-anchor="slide2" style="background-image: url(assets/img/bahaari_background.jpg);">
-					<div class="dead-center showcase-imgs" style="flex-direction: column;">
-						<a href="case-studies/bahaari.html"><img src="assets/img/bahaari_cover.jpg"></a>
+					<div class="dead-center showcase-imgs">
+						<a href="case-studies/bahaari">
+							<div class="next-proj-bahaari case-slide-img">	
+								<img src="assets/img/bahaari_logo.png">
+							</div>
+						</a>
 						<p>1.  BAHAARI<br></p>
 						<p><i>Logo, Print, Web</i></p>
 					</div>
 				</div>
 				<div id="iswim-slide" class="slide" data-anchor="slide3" style="background-image: url(assets/img/iswim_background.jpg);">
-					<div class="dead-center showcase-imgs" style="flex-direction: column;">
-						<a href="case-studies/iswim.html"><img src="assets/img/iswim_cover.jpg"></a>
+					<div class="dead-center showcase-imgs">
+						<a href="case-studies/iswim">
+							<div class="next-proj-iswim case-slide-img">	
+								<img src="assets/img/iswim_logo.png">
+							</div>
+						</a>
 						<p>2.  ISWIM<br></p>
 						<p><i>Logo, Print, Web</i></p>
 					</div>
 				</div>
 				<div id="harvest-slide" class="slide" data-anchor="slide4" style="background-image: url(assets/img/harvest_background.jpg);">
-					<div class="dead-center showcase-imgs" style="flex-direction: column;">
-						<a href="case-studies/harvest.html"><img src="assets/img/harvest_cover.jpg"></a>
+					<div class="dead-center showcase-imgs">
+						<a href="case-studies/harvest">
+							<div class="next-proj-harvest case-slide-img">	
+								<img src="assets/img/harvest_logo.png">
+							</div>
+						</a>
 						<p>3.  HARVEST<br></p>
 						<p><i>Logo, Print</i></p>
 					</div>
 				</div>
 				<div id="appunt-slide" class="slide" data-anchor="slide5" style="background-image: url(assets/img/appuntamento_background.jpg);">
-					<div class="dead-center showcase-imgs" style="flex-direction: column;">
-						<a href="case-studies/appuntamento.html"><img src="assets/img/appuntamento_cover.jpg"></a>
+					<div class="dead-center showcase-imgs">
+						<a href="case-studies/appuntamento">
+							<div class="next-proj-appunt case-slide-img">	
+								<img src="assets/img/appuntamento_logo.png">
+							</div>
+						</a>
 						<p>4.  APPUNTAMENTO<br></p>
 						<p><i>Logo, Print</i></p>
 					</div>
@@ -210,10 +229,10 @@
 			    	anchors:['page1'],
 			    	controlArrows: false
 			    });
-			    $('#home, #home-nav').click(function() {
+			    $('#home').click(function() {
 					$.fn.fullpage.moveTo('page1', 0);
 				});
-    			$('#bahaari-nav').click(function() {
+    			$('#bahaari-nav, #work-nav').click(function() {
 					$.fn.fullpage.moveTo('page1', 1);
 				});
 				$('#iswim-nav').click(function() {
