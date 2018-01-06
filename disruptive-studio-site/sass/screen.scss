@@ -16,6 +16,9 @@ html,
 body {
 	height: 100%;
 }
+a {
+	cursor: pointer;
+}
 
 // Breakpoints
 $tablet-max-view: 1023px;
@@ -219,11 +222,30 @@ nav {
 	padding: 20px;
 }
 
-ul#nav-mobile,
+#nav-mobile,
 .space-between {
 	@include justify-content(space-between);
 }
+// #nav-mobile li {
+// 	width: 100px;
+// }
+#nav-mobile li a {
+	text-align: center;
+	transition: all 0.2s;
+}
+#nav-mobile li a:hover {
+	@include shadow(2px, 2px, 2px, #222);
+	background-color: transparent;
+}
 
+nav button,
+nav button:focus {
+	border: none;
+	background-color: transparent;
+}
+#mobile-menu button {
+	color: $dark-gray;
+}
 .justify-center {
 	@include justify-content(center);
 }
@@ -424,6 +446,8 @@ nav,
 	position: absolute; 
 	width: 600px; 
 	top: 30px;
+	left: 10%;
+	width: 42%;
 }
 #case-intro-section h2 {
 	margin: 50px 0;
@@ -431,10 +455,12 @@ nav,
 #case-intro-img {
 	position: absolute; 
 	top: -50px; 
-	right: 0;
+	// right: 0;
 	height: 450px;
-	width: 800px; 
+	// width: 800px; 
 	background-size: cover;
+	right: 8%;
+	width: 56%;
 }
 .case-intro-bahaari {
 	background-image: url(../assets/img/bahaari_intro.jpg); 
@@ -478,8 +504,9 @@ nav,
 	height: 1150px;
 }
 #case-imgs.case-imgs-iswim,
-#case-imgs.case-imgs-harvest {
-	height: 1500px;
+#case-imgs.case-imgs-harvest,
+#case-imgs.case-imgs-appunt {
+	height: 1600px;
 }
 #iswim-laptop {
 	max-width: 750px;
@@ -527,33 +554,26 @@ nav,
 .case-imgs-harvest .content-wrapper div:nth-child(4) {
 	background-image: url(../assets/img/harvest_tshirt.jpg);
 }
-.case-imgs-harvest .content-wrapper div:first-child {
+.case-imgs-appunt .content-wrapper div:first-child {
 	background-image: url(../assets/img/appuntamento_buscard.jpg);
 }
-.case-imgs-harvest .content-wrapper div:nth-child(2) {
+.case-imgs-appunt .content-wrapper div:nth-child(2) {
 	background-image: url(../assets/img/appuntamento_menu.jpg);
 }
-.case-imgs-harvest .content-wrapper div:nth-child(3) {
+.case-imgs-appunt .content-wrapper div:nth-child(3) {
 	background-image: url(../assets/img/appuntamento_banner.jpg);
 }
-.case-imgs-harvest .content-wrapper div:nth-child(4) {
+.case-imgs-appunt .content-wrapper div:nth-child(4) {
 	background-image: url(../assets/img/appuntamento_wallpaper.jpg);
 }
-#we-should-talk-section.we-should-talk-bahaari {
+#we-should-talk-section {
 	height: 250px;
 }
-#we-should-talk-section.we-should-talk-iswim,
-#we-should-talk-section.we-should-talk-harvest {
-	height: 350px;
-}
-#we-should-talk-section.we-should-talk-iswim div.flex {
-	@include justify-content(flex-end);
-}
-#we-should-talk-section.we-should-talk-iswim div.flex.dead-center,
-#we-should-talk-section.we-should-talk-harvest div.flex.dead-center {
-	padding-bottom: 50px;
-}
+// #we-should-talk-section.we-should-talk-iswim div.flex {
+// 	@include justify-content(flex-end);
+// }
 #we-should-talk-section div.flex.dead-center {
+	padding-bottom: 50px;
 	@include flex-direction(column);
 }
 #parallax-product {
@@ -597,20 +617,30 @@ nav,
 }
 #next-project-text {
 	background-color: white; 
-	padding-left: 100px; 
+	// padding-left: 100px; 
+	padding-left: 10%;
 	position: relative; 
-	width: 700px; 
+	// width: 700px; 
+	width: 50%;
 	top: 75px; 
 	height: 375px; 
 	left: 250px;
 	@include flex-direction(column);
 }
-#next-project-text a {
-	width: 200px;
+#next-project-text {
+	a {
+		// width: 200px;
+		transition: all 0.2s;
+		color: rgba(0, 0, 0, 0.87);
+	}
+
+	a:hover {
+		color: $mid-yellow;
+		text-shadow: 2px 2px 2px black;
+	}
 }
 #next-project-img,
 .case-slide-img {
-	width: 750px; 
 	height: 400px; 
 	background-size: cover;
 	@include align-items(center);
@@ -620,10 +650,12 @@ nav,
 #next-project-img {
 	position: absolute; 
 	top: -50px; 
-	right: 0; 	
+	right: 0; 
+	width: 50%;	
 }
 .case-slide-img {
 	margin-bottom: 30px;
+	width: 750px;
 }
 .next-proj-iswim {
 	background-image: url(../assets/img/iswim_cover.jpg); 	
@@ -648,6 +680,39 @@ nav,
 	    background-position: center;
 	    background-repeat: no-repeat;
 	}
+	#mobile-menu {
+		padding-top: 20px;
+
+		.underline-short {
+			margin: auto;
+		}
+	}
+	#side-home {
+		display: flex;
+	}
+	#sidenav-overlay {
+		z-index: 996;
+	}
+	#side-home img {
+		width: 80%;
+	}
+	#side-social {
+		@include flexbox();
+		@include justify-content(space-around);
+		@include flex-direction(row);
+
+		a {
+			padding: 0;
+			text-align: center;
+
+			i {
+				margin: 0;
+			}
+		}
+	}
+	.case-slide-img {
+		width: 99vw;
+	}
 	#lets-talk-section div.about-left {
 		width: 0;
 	}
@@ -665,6 +730,10 @@ nav,
 	}
 	#about div.modal-content section > div {
 		width: 100%;
+	}
+	#about .modal-content {
+		height: calc(100% - 100px);
+		bottom: 0;
 	}
 	#about .content-wrapper {
 		padding: 0;
@@ -738,10 +807,24 @@ nav,
 		width: 100%;
 		// height: 1300px;
 	}
-	#we-should-talk-section.we-should-talk-iswim div.flex.dead-center,
-	#we-should-talk-section.we-should-talk-harvest div.flex.dead-center {
-		@include justify-content(center);
-		padding: 0;
+	// #we-should-talk-section.we-should-talk-iswim div.flex.dead-center,
+	// #we-should-talk-section.we-should-talk-harvest div.flex.dead-center {
+	// 	@include justify-content(center);
+	// 	padding: 0;
+	// }
+
+	#we-should-talk-section {
+		height: 200px;
+	}
+	#case-imgs.case-imgs-bahaari {
+		height: 1020px;
+	}
+	#case-imgs.case-imgs-iswim {
+		height: 1500px;
+	}
+	#case-imgs.case-imgs-harvest, 
+	#case-imgs.case-imgs-appunt {
+		height: 1420px;
 	}
 	#case-contact-section {
 		padding: 50px;
@@ -771,6 +854,9 @@ nav,
 		font-size: 30px;
 		line-height: 45px;
 	}
+	#about-1 {
+		padding-top: 0;
+	}
 	.side-navs {
 		padding: 0;
 	}
@@ -790,6 +876,10 @@ nav,
 	#case-intro-img,
 	#case-intro-section div:first-child {
 		width: 90%;
+		right: 0;
+	}
+	.case-slide-img img {
+		width: 70%;
 	}
 	#parallax-product {
 		height: 300px;
@@ -801,9 +891,10 @@ nav,
 		height: 750px;
 	}
 	#case-imgs.case-imgs-iswim {
-		height: 1000px;
+		height: 1015px;
 	}
-	#case-imgs.case-imgs-harvest {
+	#case-imgs.case-imgs-harvest,
+	#case-imgs.case-imgs-appunt {
 		height: 1050px;
 	}
 	#case-imgs .content-wrapper div {
@@ -814,8 +905,7 @@ nav,
 	#case-sites div.side-navs:first-child {
 		height: 600px;
 	}
-	#we-should-talk-section.we-should-talk-iswim, 
-	#we-should-talk-section.we-should-talk-harvest {
+	#we-should-talk-section {
 		height: 150px;
 	}
 	#iswim-laptop {
@@ -832,7 +922,7 @@ nav,
 	}
 	#next-project-text,
 	#next-project-img {
-		width: 100%;
+		width: 90%;
 	}
 	#next-project-img img {
 		width: 80%;

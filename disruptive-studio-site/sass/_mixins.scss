@@ -58,3 +58,9 @@
     clip: auto;
   }
 }
+
+// Shadow
+@mixin shadow($x, $y, $blur, $color) {
+  -webkit-filter: drop-shadow($x $y $blur $color);
+  filter: drop-shadow($x $y $blur $color);
+}

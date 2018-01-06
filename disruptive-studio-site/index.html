@@ -22,25 +22,49 @@
 	<body class="black">
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/bin/materialize.js"></script>
-		<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+		<!-- <script type="text/javascript" src="js/bin/materialize.js"></script> -->
+		<script type="text/javascript" src="js/materialize.js"></script>
 		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 		<script type="text/javascript" src="js/mob-detect.js"></script>
-
 		<!-- Nav bar -->
 		<div class="navbar-fixed">
 			<nav>
 				<div class="nav-wrapper">
-					<ul id="nav-mobile" class="hide-on-med-and-down flex">
+					<img id="home-mob" class="brand-logo hide-on-large-only" src="assets/img/icon_logo.png">
+					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul id="nav-mobile" class="flex hide-on-med-and-down">
 						<!-- Home Link -->
-						<li><a href="#" class=""><img id="home" src="assets/img/icon_logo.png"></a></li>
-						<li><a id="work-nav" class="white-text montserrat caps" href="#!">WORK</a></li>
-						<li><a class="white-text montserrat caps" href="#!">HIRE US</a></li>
+						<li><button id="home"><img src="assets/img/icon_logo.png"></button></li>
+						<li><button id="work-nav" class="white-text montserrat caps">WORK</button></li>
+						<li><button class="white-text montserrat caps">HIRE US</button></li>
+					</ul>
+					<ul class="side-nav" id="mobile-menu">
+						<li>
+							<button id="side-home">
+								<img src="assets/img/disruptive_logo_full.png">
+							</button>
+						</li>
+						<li>
+							<button id="work-nav" class="montserrat caps">WORK</button>
+						</li>
+						<li>
+							<button class="montserrat caps">HIRE US</button>
+						</li>
+						<li>
+							<button class="modal-trigger montserrat caps" href="#about">RETHINK THE STATUS QUO</button>
+						</li>
+						<div class="underline-short"></div>
+						<li id="side-social">
+							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						</li>
 					</ul>
 				</div>
 			</nav>
 		</div>
-		<div class="side-navs left-nav z10">
+		<div class="hide-on-med-and-down side-navs left-nav z10">
 			<div class="flex vert">
 				<p class="white-text vert-text">&mdash;&mdash;&nbsp;&nbsp;</p>
 				<a href="#"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>
@@ -49,7 +73,7 @@
 				<a id="email-icon" href="#"><i class="fa fa-envelope-o white-text" aria-hidden="true"></i></a>
 			</div>
 		</div>
-		<div class="side-navs right-nav z10">
+		<div class="hide-on-med-and-down side-navs right-nav z10">
 			<div class="flex vert">
 				<a class="modal-trigger vert-text" href="#about"><p class="white-text caps">&mdash;&mdash;&nbsp;&nbsp;RETHINK THE STATUS QUO</p></a>
 			</div>
@@ -66,8 +90,8 @@
 		</div>
 
 		<!-- About Us Modal -->
-		<div id="about" class="modal appear-right">
-				<section id="about-top">
+		<div id="about" class="modal modal-fixed-footer appear-right">
+				<section id="about-top" class="z1">
 					<i class="fa fa-times modal-close white-text" aria-hidden="true"></i>
 					<img src="assets/img/disruptive_logo_full.png">
 				</section>
@@ -219,33 +243,8 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-		  	$(document).ready(function(){
-			    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-			    $('.modal').modal();
-			    $('parallax').parallax();
+		<script type="text/javascript" src="js/libraries.js"></script>
+		<script type="text/javascript" src="js/fullpage.js"></script>
 
-			    $('#fullpage').fullpage({
-			    	anchors:['page1'],
-			    	controlArrows: false
-			    });
-			    $('#home').click(function() {
-					$.fn.fullpage.moveTo('page1', 0);
-				});
-    			$('#bahaari-nav, #work-nav').click(function() {
-					$.fn.fullpage.moveTo('page1', 1);
-				});
-				$('#iswim-nav').click(function() {
-					$.fn.fullpage.moveTo('page1', 2);
-				});
-				$('#harvest-nav').click(function() {
-					$.fn.fullpage.moveTo('page1', 3);
-				});
-				$('#appunt-nav').click(function() {
-					$.fn.fullpage.moveTo('page1', 4);
-				});
-			});
-
-		</script>
 	</body>
 </html>

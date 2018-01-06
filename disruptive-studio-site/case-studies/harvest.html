@@ -22,41 +22,58 @@
 	<body class="black">
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="../js/bin/materialize.min.js"></script>
-		<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+		<!-- <script type="text/javascript" src="../js/bin/materialize.min.js"></script> -->
+		<script type="text/javascript" src="../js/materialize.min.js"></script>
 		<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
-		<!-- Nav bar -->
-		<div class="navbar-fixed">
-			<nav>
-				<div class="nav-wrapper">
-					<ul id="nav-mobile" class="hide-on-med-and-down flex">
-						<!-- Home Link -->
-						<li><a href="../index.html" class=""><img id="home" src="../assets/img/icon_logo.png"></a></li>
-						<li><a class="white-text montserrat caps" href="#">WORK</a></li>
-						<li><a class="white-text montserrat caps" href="#">HIRE US</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-		<div class="side-navs left-nav z10">
-			<div class="flex vert">
-				<p class="white-text vert-text">&mdash;&mdash;&nbsp;&nbsp;</p>
-				<a href="#"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-twitter white-text" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-instagram white-text" aria-hidden="true"></i></a>
-				<a id="email-icon" href="#"><i class="fa fa-envelope-o white-text" aria-hidden="true"></i></a>
-			</div>
-		</div>
-		<div id="bottom-nav" class="z10 fixed white-text">
-			<p>Case Studies</p>
-		</div>
+		<script type="text/javascript" src="../js/mob-detect.js"></script>
 
 		<!-- Start Case Studies page -->
 		<section class="case-hero parallax-container">
+			<!-- Nav bar -->
+			<div id="navbar" class="navbar-fixed">
+				<nav>
+					<div class="nav-wrapper">
+						<img id="home-mob" class="brand-logo hide-on-large-only" src="../assets/img/icon_logo.png">
+						<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+						<ul id="nav-mobile" class="flex hide-on-med-and-down">
+							<!-- Home Link -->
+							<li><a href="../index.html" id="home"><img src="../assets/img/icon_logo.png"></a></li>
+							<li><a href="../index.html#page1/slide2" id="work-nav" class="white-text montserrat caps">WORK</a></li>
+							<li><a class="white-text montserrat caps">HIRE US</a></li>
+						</ul>
+						<ul class="side-nav" id="mobile-menu">
+							<li>
+								<button id="side-home">
+									<img src="../assets/img/disruptive_logo_full.png">
+								</button>
+							</li>
+							<li>
+								<button id="work-nav" class="montserrat caps">WORK</button>
+							</li>
+							<li>
+								<button class="montserrat caps">HIRE US</button>
+							</li>
+							<!-- <li>
+								<button class="modal-trigger montserrat caps" href="#about">RETHINK THE STATUS QUO</button>
+							</li> -->
+							<div class="underline-short"></div>
+							<li id="side-social">
+								<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div id="bottom-nav" class="z10 fixed white-text abs-pos">
+				<p>Case Studies</p>
+			</div>
 			<div class="parallax"><img src="../assets/img/harvest_hero.jpg"></div>
 			<div class="dead-center"><img src="../assets/img/harvest_logo.png"></div>
 		</section>
-		<section id="case-intro-section" class="content-wrapper">
+		<section id="case-intro-section" class="">
 			<div class="z1 z-depth-4">
 				<p class="montserrat caps">Intro</p>
 				<div class="underline-short"></div>
@@ -190,9 +207,9 @@
 		<section id="next-section">
 			<div>
 				<div id="next-project-text" class="z-depth-4 flex justify-center">
-					<a class="waves-effect waves-light btn-large" href="appuntamento.html">NEXT PROJECT</a>
-					<!-- <p style="text-align: center;">NEXT PROJECT<br><br> -->
-					<p>4.  APPUNTAMENTO<br>
+					<p>
+						<a class="" href="appuntamento">NEXT PROJECT</a><br>
+					4.  APPUNTAMENTO<br>
 					<i>Logo, Print</i></p>
 				</div>
 				<div id="next-project-img" class="z-depth-4 next-proj-appunt">
@@ -201,23 +218,6 @@
 			</div>
 		</section>
 		<section class="spacer"></section>
-		<script type="text/javascript">
-		  	$(document).ready(function(){
-			    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-			    $('.modal').modal();
-			    $('.parallax').parallax();
-			    $('#fullpage').fullpage({
-			    	anchors:['page1', 'page2'],
-			    	controlArrows: false
-			    });
-			    $('#home').click(function() {
-					$.fn.fullpage.moveTo('page1', 0);
-				});
-    			$('#bahaari-nav').click(function() {
-					$.fn.fullpage.moveTo('page1', 1);
-				});
-			});
-
-		</script>
+		<script type="text/javascript" src="../js/libraries.js"></script>
 	</body>
 </html>
