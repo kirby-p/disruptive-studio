@@ -25,7 +25,7 @@
 		<!-- <script type="text/javascript" src="js/bin/materialize.js"></script> -->
 		<script type="text/javascript" src="js/materialize.js"></script>
 		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-		<script type="text/javascript" src="js/mob-detect.js"></script>
+		<!-- <script type="text/javascript" src="js/mob-detect.js"></script> -->
 		<!-- Nav bar -->
 		<div class="navbar-fixed">
 			<nav>
@@ -38,27 +38,30 @@
 						<li><button id="work-nav" class="white-text montserrat caps">WORK</button></li>
 						<li><button class="white-text montserrat caps">HIRE US</button></li>
 					</ul>
+
+					<!-- Mobile Menu -->
 					<ul class="side-nav" id="mobile-menu">
 						<li>
-							<button id="side-home">
-								<img src="assets/img/disruptive_logo_full.png">
-							</button>
+							<img id="side-home" src="assets/img/logo_mobile_dark.png">
 						</li>
 						<li>
-							<button id="work-nav" class="montserrat caps">WORK</button>
+							<p id="work-nav" class="playfair white-text italic mobile-menu-items">Work</p>
 						</li>
 						<li>
-							<button class="montserrat caps">HIRE US</button>
+							<p class="modal-trigger playfair white-text italic mobile-menu-items" href="#about">Rethink the Status Quo</p>
 						</li>
 						<li>
-							<button class="modal-trigger montserrat caps" href="#about">RETHINK THE STATUS QUO</button>
+							<p id="lets-talk-mobile" class="playfair white-text italic mobile-menu-items">Let's Talk</p>
 						</li>
-						<div class="underline-short"></div>
+						<li id="company-info-mobile">
+							<p class="white-text"><b>DISRUPTIVE, LLC</b></p>
+							<p><a href="tel: +1-407-505-5987">+1 (407) 505.5987</a></p>
+							<p><a href="mailto: hello@disruptive.studio">hello@disruptive.studio</a></p>
+						</li>
 						<li id="side-social">
 							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
 						</li>
 					</ul>
 				</div>
@@ -178,6 +181,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div id="fullpage">
 			<div class="section">
 				<div id="home-slide" class="slide" data-anchor="slide1">

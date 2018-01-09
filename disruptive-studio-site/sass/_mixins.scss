@@ -64,3 +64,11 @@
   -webkit-filter: drop-shadow($x $y $blur $color);
   filter: drop-shadow($x $y $blur $color);
 }
+
+// Radial Gradient
+@mixin gradient-directional($start-color, $end-color, $deg) {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient($deg, $start-color, $end-color); // Opera 12
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}

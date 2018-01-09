@@ -47,6 +47,10 @@ $turq: #a4dad5;
 $montserrat: 'Montserrat', sans-serif;
 $playfair: 'Playfair Display', serif;
 
+.italic {
+	font-style: italic;
+}
+
 // Text Shadow
 $default-text-shadow-color: grey;
 $default-text-shadow-v-offset: 1px;
@@ -675,12 +679,12 @@ nav,
 // Tablets
 @media only screen and (max-width: $tablet-max-view) {
 	.navbar-fixed {
-		background-color: black;
 		height: 100px;
 	}
 	nav {
 		height: inherit;
-	
+		background-color: black !important;
+
 		.brand-logo {
 			left: 90%;
 			height: 30px;
@@ -697,25 +701,27 @@ nav,
 	    background-repeat: no-repeat;
 	}
 	#mobile-menu {
-		padding-top: 20px;
+		padding: 20px;
+		@include gradient-directional($mid-yellow, $dark-yellow, 115deg);
 
 		.underline-short {
 			margin: auto;
 		}
 	}
-	#side-home {
-		display: flex;
+	.mobile-menu-items {
+	    line-height: 50px;
 	}
 	#sidenav-overlay {
 		z-index: 996;
 	}
-	#side-home img {
+	#side-home {
 		width: 80%;
 	}
 	#side-social {
 		@include flexbox();
 		@include justify-content(space-around);
 		@include flex-direction(row);
+		width: 100px;
 
 		a {
 			padding: 0;
@@ -723,7 +729,19 @@ nav,
 
 			i {
 				margin: 0;
+				color: white;
 			}
+		}
+	}
+	#company-info-mobile {
+		a {
+			padding: 0;
+		}
+		p:first-child{
+			line-height: 40px;
+		}
+		p {
+			line-height: 20px;
 		}
 	}
 	.case-slide-img {
@@ -735,7 +753,9 @@ nav,
 	#lets-talk-section div#lets-talk {
 		width: 100%;
 	}
-	p.numb-sect {
+	p.numb-sect,
+	#lets-talk-mobile,
+	#side-home {
 		margin-bottom: 50px;
 	}
 	#about {
