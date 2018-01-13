@@ -7,7 +7,7 @@
 @import "materialize";
 @import "flexbox";
 @import "transform";
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400,400i');
 @import "font-awesome-compass";
 @import "font-awesome";
 @import "compass/css3/text-shadow";
@@ -16,12 +16,13 @@ html,
 body {
 	height: 100%;
 }
-a {
+a,
+.pointer {
 	cursor: pointer;
 }
 
 // Breakpoints
-$tablet-max-view: 1023px;
+$tablet-max-view: 1024px;
 $tablet-min-view: 768px;
 $mobile-max-view: 767px;
 
@@ -528,6 +529,21 @@ nav,
 	background-size: cover;
 	background-position: center;
 }
+#bahaari-slide {
+	background-image: url(../assets/img/bahaari_background.jpg);
+}
+#iswim-slide {
+	background-image: url(../assets/img/iswim_background.jpg);
+}
+#harvest-slide {
+	background-image: url(../assets/img/harvest_background.jpg);
+}
+#appunt-slide {
+	background-image: url(../assets/img/appuntamento_background.jpg);
+}
+#contact-slide {
+	background-image: url(../assets/img/contact_hero.jpg);	
+}
 .case-imgs-bahaari .content-wrapper div:first-child {
 	background-image: url(../assets/img/bahaari_buscard.jpg);
 }
@@ -673,11 +689,66 @@ nav,
 .next-proj-bahaari {
 	background-image: url(../assets/img/bahaari_cover.jpg); 	
 }
+.hide-on-desktop {
+    display: none;
+}
+.hide-on-tablet-and-mobile {
+	display: initial;
+}
+#contact-form {
+	margin-top: 100px;
+
+	div {
+		@include flexbox();
+		@include flex-direction(row);
+		@include align-items(center);
+		margin-bottom: 30px;
+	}
+	p {
+		margin: 0;
+	}
+	input {
+		width: 150px; 
+		margin: 0 10px;
+		height: 20px;
+		color: white;
+	}
+}
+#contact-submit {
+	@include justify-content(center);
+	margin-top: 70px;
+
+	button {
+		background-color: transparent;
+	    border: none;
+	    text-transform: uppercase;
+	    color: $mid-yellow;
+	    font-weight: bold;
+	    letter-spacing: 6px;
+	    width: 100px;
+	    text-align: center;
+	    transition: all 0.2s;
+	}
+	button:hover {
+		border-bottom: 1px solid $mid-yellow;
+	    box-shadow: 0 1px 0 0 $mid-yellow;
+	}
+}
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $mid-yellow;
+    box-shadow: 0 1px 0 0 $mid-yellow;
+}
 
 // Media Queries
 
 // Tablets
 @media only screen and (max-width: $tablet-max-view) {
+	.hide-on-desktop {
+	    display: initial;
+	}
+	.hide-on-tablet-and-mobile {
+		display: none;
+	}
 	.navbar-fixed {
 		height: 100px;
 	}
@@ -693,6 +764,9 @@ nav,
 		.nav-wrapper {
 			height: 60px;
 		}
+	}
+	#bottom-nav {
+		display: none;
 	}
 	.video-bg-container {
 		background-image: url(../assets/img/homepage_hero.jpg);
@@ -744,8 +818,29 @@ nav,
 			line-height: 20px;
 		}
 	}
+	#bahaari-slide,
+	#iswim-slide,
+	#harvest-slide,
+	#appunt-slide {
+		background-image: none;
+	}
+	.next-proj-bahaari {
+		background-image: url(../assets/img/homepage_mobile_bahaari_cover.jpg);
+	}
+	.next-proj-iswim {
+		background-image: url(../assets/img/homepage_mobile_iswim_cover.jpg);
+	}
+	.next-proj-harvest {
+		background-image: url(../assets/img/homepage_mobile_harvest_cover.jpg);
+	}
+	.next-proj-appunt {
+		background-image: url(../assets/img/homepage_mobile_appuntamento_cover.jpg);
+	}
 	.case-slide-img {
-		width: 99vw;
+		width: 100vw;
+	    display: flex;
+	    flex-direction: column;
+
 	}
 	#lets-talk-section div.about-left {
 		width: 0;

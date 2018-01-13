@@ -25,7 +25,12 @@
 		<!-- <script type="text/javascript" src="js/bin/materialize.js"></script> -->
 		<script type="text/javascript" src="js/materialize.js"></script>
 		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-		<!-- <script type="text/javascript" src="js/mob-detect.js"></script> -->
+		<script type="text/javascript" src="js/contact-form.js"></script>
+
+		<!-- Web Form Script -->
+		<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b58.r512241-phase1"></script>
+
+
 		<!-- Nav bar -->
 		<div class="navbar-fixed">
 			<nav>
@@ -36,7 +41,7 @@
 						<!-- Home Link -->
 						<li><button id="home"><img src="assets/img/icon_logo.png"></button></li>
 						<li><button id="work-nav" class="white-text montserrat caps">WORK</button></li>
-						<li><button class="white-text montserrat caps">HIRE US</button></li>
+						<li><button id="contact-nav" class="white-text montserrat caps">HIRE US</button></li>
 					</ul>
 
 					<!-- Mobile Menu -->
@@ -181,7 +186,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="fullpage">
 			<div class="section">
 				<div id="home-slide" class="slide" data-anchor="slide1">
@@ -201,52 +206,165 @@
 						</video>
 					</div>
 				</div>
-				<div id="bahaari-slide" class="slide" data-anchor="slide2" style="background-image: url(assets/img/bahaari_background.jpg);">
+				<div id="bahaari-slide" class="slide" data-anchor="slide2">
 					<div class="dead-center showcase-imgs">
 						<a href="case-studies/bahaari">
-							<div class="next-proj-bahaari case-slide-img">	
+							<div class="next-proj-bahaari case-slide-img">
 								<img src="assets/img/bahaari_logo.png">
+							<p class="hide-on-desktop" style="margin-top: 30px;">1.  BAHAARI<br></p>
+							<p class="hide-on-desktop"><i>Logo, Print, Web</i></p>
 							</div>
 						</a>
-						<p>1.  BAHAARI<br></p>
-						<p><i>Logo, Print, Web</i></p>
+						<p class="hide-on-tablet-and-mobile">1.  BAHAARI<br></p>
+						<p class="hide-on-tablet-and-mobile"><i>Logo, Print, Web</i></p>
 					</div>
 				</div>
-				<div id="iswim-slide" class="slide" data-anchor="slide3" style="background-image: url(assets/img/iswim_background.jpg);">
+				<div id="iswim-slide" class="slide" data-anchor="slide3">
 					<div class="dead-center showcase-imgs">
 						<a href="case-studies/iswim">
 							<div class="next-proj-iswim case-slide-img">	
 								<img src="assets/img/iswim_logo.png">
+								<p class="hide-on-desktop" style="margin-top: 30px;">2.  ISWIM<br></p>
+								<p class="hide-on-desktop"><i>Logo, Print, Web</i></p>
 							</div>
 						</a>
-						<p>2.  ISWIM<br></p>
-						<p><i>Logo, Print, Web</i></p>
+						<p class="hide-on-tablet-and-mobile">2.  ISWIM<br></p>
+						<p class="hide-on-tablet-and-mobile"><i>Logo, Print, Web</i></p>
 					</div>
 				</div>
-				<div id="harvest-slide" class="slide" data-anchor="slide4" style="background-image: url(assets/img/harvest_background.jpg);">
+				<div id="harvest-slide" class="slide" data-anchor="slide4">
 					<div class="dead-center showcase-imgs">
 						<a href="case-studies/harvest">
 							<div class="next-proj-harvest case-slide-img">	
 								<img src="assets/img/harvest_logo.png">
+								<p class="hide-on-desktop" style="margin-top: 30px;">3.  HARVEST<br></p>
+								<p class="hide-on-desktop"><i>Logo, Print</i></p>
 							</div>
 						</a>
-						<p>3.  HARVEST<br></p>
-						<p><i>Logo, Print</i></p>
+						<p class="hide-on-tablet-and-mobile" >3.  HARVEST<br></p>
+						<p class="hide-on-tablet-and-mobile" ><i>Logo, Print</i></p>
 					</div>
 				</div>
-				<div id="appunt-slide" class="slide" data-anchor="slide5" style="background-image: url(assets/img/appuntamento_background.jpg);">
+				<div id="appunt-slide" class="slide" data-anchor="slide5">
 					<div class="dead-center showcase-imgs">
 						<a href="case-studies/appuntamento">
 							<div class="next-proj-appunt case-slide-img">	
 								<img src="assets/img/appuntamento_logo.png">
+								<p class="hide-on-desktop" style="margin-top: 30px;">4.  APPUNTAMENTO<br></p>
+								<p class="hide-on-desktop"><i>Logo, Print</i></p>
 							</div>
 						</a>
-						<p>4.  APPUNTAMENTO<br></p>
-						<p><i>Logo, Print</i></p>
+						<p class="hide-on-tablet-and-mobile" >4.  APPUNTAMENTO<br></p>
+						<p class="hide-on-tablet-and-mobile" ><i>Logo, Print</i></p>
+					</div>
+				</div>
+				<div id="contact-slide" class="slide" data-anchor="slide6">
+					<div class="dead-center showcase-imgs">
+						<h2 class="white-text playfair italic">Together, we'll conquer the world</h2>
+						<p class="montserrat white-text caps">By the way, we speak french, too</p>
+						<form id="contact-form">
+							<div class="flex">
+								<!-- <label for="answer1" class="montserrat white-text caps">My name is </label> -->
+								<p class="caps">My name is </p>
+								<input type="text" name="contact-name">
+								<p class="caps"> and I have a </p>
+								<input type="text" name="contact-project">
+								<p class="caps"> project. </p><br>
+							</div>
+							<div class="flex">
+								<p class="caps"> I can be reached at </p>
+								<input type="tel" name="contact-tel">
+								<p class="caps"> or via email </p>
+								<input type="email" name="contact-email">
+								<p class="caps">.</p>
+							</div>
+							<div id="contact-submit" class="flex">
+								<button type="submit" class="caps">Submit</button>	
+							</div>
+						</form>
+
+						<form id="hidden-contact-form" style="display: none;" name="catwebformform28163" method="post" onsubmit="return checkWholeForm28163(this)" enctype="multipart/form-data" action="http://disruptivestdo.businesscatalyst.com/FormProcessv2.aspx?WebFormID=422256&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}"> 
+							<span class="req">*</span>  Required
+							<table class="webform" cellspacing="0" cellpadding="2" border="0">
+								<tr>
+									<td>
+										<label for="CAT_Custom_719700">Name <span class="req">*</span></label><br />
+										<input type="text" maxlength="4000" name="CAT_Custom_719700" id="CAT_Custom_719700" class="cat_textbox" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="CAT_Custom_721076">Project</label><br />
+										<input type="text" maxlength="4000" name="CAT_Custom_721076" id="CAT_Custom_721076" class="cat_textbox" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="HomePhone">Home Phone Number <span class="req">*</span></label><br />
+										<input type="text" name="HomePhone" id="HomePhone" class="cat_textbox" maxlength="255" /></td>
+									</tr>
+									<tr>
+										<td>
+											<label for="EmailAddress">Email Address <span class="req">*</span></label><br />
+											<input type="text" name="EmailAddress" id="EmailAddress" class="cat_textbox" maxlength="255" /> 
+										</td>
+									</tr>
+									<tr>
+										<td>{module_ccsecurity}</td></tr><tr><td><input class="cat_button" type="submit" value="Submit" id="catwebformbutton" />
+										</td>
+									</tr>
+								</table>
+								<script type="text/javascript">
+									//<![CDATA[
+									var submitcount28163 = 0;function checkWholeForm28163(theForm){var why = "";if (theForm.HomePhone) why += isEmpty(theForm.HomePhone.value, "Home Phone Number"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if (theForm.CAT_Custom_719700) why += isEmpty(theForm.CAT_Custom_719700.value, "Name");if(why != ""){alert(why);return false;}if(submitcount28163 == 0){submitcount28163++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}
+									//]]>
+								</script>
+						</form>
+
+<!-- 						<form style="display: none;" name="catwebformform13278" method="post" onsubmit="return checkWholeForm13278(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=422256&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}">
+					    <table class="webform" cellspacing="0" cellpadding="2" border="0">
+					        <tbody>
+					            <tr>
+					                <td><label for="CAT_Custom_719700" class="montserrat caps">Name <span class="req mon">*</span></label><br />
+					                <input type="text" maxlength="4000" name="CAT_Custom_719700" id="CAT_Custom_719700" class="cat_textbox white-text" /></td>
+
+					                <td><label for="EmailAddress" class="montserrat caps">Email Address <span class="req">*</span></label><br />
+					                <input type="text" name="EmailAddress" id="EmailAddress" class="cat_textbox white-text" maxlength="255" /> </td>
+
+					                <td><label for="HomePhone" class="montserrat caps">Phone Number <span class="req">*</span></label><br />
+					                <input type="text" name="HomePhone" id="HomePhone" class="cat_textbox white-text" maxlength="255" /></td>
+				                </tr>
+				                <tr>
+					                <td colspan="2"><label for="CAT_Custom_719699" class="montserrat caps">What Is Your Project? <span class="req">*</span></label><br />
+					                <textarea name="CAT_Custom_719699" id="CAT_Custom_719699" cols="10" rows="4" class="cat_listbox white-text" onkeydown="if(this.value.length&gt;=4000)this.value=this.value.substring(0,3999);"></textarea></td>
+
+					                <td style="text-align: center;"><input class="cat_button" type="submit" value="Submit" id="catwebformbutton" /></td>
+					            </tr>
+					        </tbody>
+					    </table>
+					    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b58.r512241-phase1"></script><form name="catwebformform28163" method="post" onsubmit="return checkWholeForm28163(this)" enctype="multipart/form-data" action="http://disruptivestdo.businesscatalyst.com/FormProcessv2.aspx?WebFormID=422256&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}"> <span class="req">*</span>  Required<table class="webform" cellspacing="0" cellpadding="2" border="0"><tr><td><label for="CAT_Custom_719700">Name <span class="req">*</span></label><br /><input type="text" maxlength="4000" name="CAT_Custom_719700" id="CAT_Custom_719700" class="cat_textbox" /></td></tr><tr><td><label for="CAT_Custom_721076">Project</label><br /><input type="text" maxlength="4000" name="CAT_Custom_721076" id="CAT_Custom_721076" class="cat_textbox" /></td></tr><tr><td><label for="HomePhone">Home Phone Number <span class="req">*</span></label><br /><input type="text" name="HomePhone" id="HomePhone" class="cat_textbox" maxlength="255" /></td></tr><tr><td><label for="EmailAddress">Email Address <span class="req">*</span></label><br /><input type="text" name="EmailAddress" id="EmailAddress" class="cat_textbox" maxlength="255" /> </td></tr><tr><td>{module_ccsecurity}</td></tr><tr><td><input class="cat_button" type="submit" value="Submit" id="catwebformbutton" /></td></tr></table><script type="text/javascript">
+						//<![CDATA[
+						var submitcount28163 = 0;function checkWholeForm28163(theForm){var why = "";if (theForm.HomePhone) why += isEmpty(theForm.HomePhone.value, "Home Phone Number"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if (theForm.CAT_Custom_719700) why += isEmpty(theForm.CAT_Custom_719700.value, "Name");if(why != ""){alert(why);return false;}if(submitcount28163 == 0){submitcount28163++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}
+						//]]>
+						</script></form> -->
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- <footer style="background-color: black; height: 100px;display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;">
+			<img src="assets/img/disruptive_logo_full.png">
+			<div>
+				<ul>
+					<li><a href="">Hire Us</a></li>
+					<li><a href="">Facebook</a></li>
+					<li><a href="">Twitter</a></li>
+					<li><a href="mailto:career@disruptive.studio">Career</a></li>
+				</ul>
+			</div>
+		</footer> -->
 		<script type="text/javascript" src="js/libraries.js"></script>
 		<script type="text/javascript" src="js/fullpage.js"></script>
 
