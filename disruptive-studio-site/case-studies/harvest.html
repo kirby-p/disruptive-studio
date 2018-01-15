@@ -19,7 +19,7 @@
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
-	<body class="black">
+	<body>
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<!-- <script type="text/javascript" src="../js/bin/materialize.min.js"></script> -->
@@ -30,38 +30,41 @@
 		<!-- Start Case Studies page -->
 		<section class="case-hero parallax-container">
 			<!-- Nav bar -->
-			<div id="navbar" class="navbar-fixed">
+			<div class="navbar-fixed">
 				<nav>
 					<div class="nav-wrapper">
 						<img id="home-mob" class="brand-logo hide-on-large-only" src="../assets/img/icon_logo.png">
 						<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
 						<ul id="nav-mobile" class="flex hide-on-med-and-down">
 							<!-- Home Link -->
-							<li><a href="../index.html" id="home"><img src="../assets/img/icon_logo.png"></a></li>
-							<li><a href="../index.html#page1/slide2" id="work-nav" class="white-text montserrat caps">WORK</a></li>
-							<li><a class="white-text montserrat caps">HIRE US</a></li>
+								<li><a href="../index.html" id="home"><img src="../assets/img/icon_logo.png"></a></li>
+								<li><a href="../index.html#page1/slide2" id="work-nav" class="white-text montserrat caps">WORK</a></li>
+								<li><a href="../index.html#page1/slide6" class="white-text montserrat caps">HIRE US</a></li>
 						</ul>
+
+						<!-- Mobile Menu -->
 						<ul class="side-nav" id="mobile-menu">
 							<li>
-								<button id="side-home">
-									<img src="../assets/img/disruptive_logo_full.png">
-								</button>
+								<img id="side-home" src="../assets/img/logo_mobile_dark.png">
 							</li>
 							<li>
-								<button id="work-nav" class="montserrat caps">WORK</button>
+								<p id="work-nav" class="playfair white-text italic mobile-menu-items"><a href="../index.html#works">Work</a></p>
 							</li>
 							<li>
-								<button class="montserrat caps">HIRE US</button>
+								<p class="modal-trigger playfair white-text italic mobile-menu-items" href="#about">Rethink the Status Quo</p>
 							</li>
-							<!-- <li>
-								<button class="modal-trigger montserrat caps" href="#about">RETHINK THE STATUS QUO</button>
-							</li> -->
-							<div class="underline-short"></div>
+							<li>
+								<p id="lets-talk-mobile" class="playfair white-text italic mobile-menu-items"><a href="../index.html#contact">Let's Talk</a></p>
+							</li>
+							<li id="company-info-mobile">
+								<p class="white-text"><b>DISRUPTIVE, LLC</b></p>
+								<p><a href="tel: +1-407-505-5987">+1 (407) 505.5987</a></p>
+								<p><a href="mailto: hello@disruptive.studio">hello@disruptive.studio</a></p>
+							</li>
 							<li id="side-social">
 								<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 								<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 								<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
 							</li>
 						</ul>
 					</div>
@@ -218,6 +221,24 @@
 			</div>
 		</section>
 		<section class="spacer"></section>
+		<footer class="hide-on-tablet-and-mobile">
+			<div>
+				<img src="../assets/img/disruptive_logo_full.png">
+			</div>
+			<div id="footer-links" style="width: 50%;">
+				<ul>
+					<li><p class="yellow-text">&mdash;&mdash;&nbsp;&nbsp;</p></li>
+					<li><a class="white-text caps" href="../index.html#page1/slide6">Hire Us</a></li>
+					<li><a class="white-text caps" href="">Facebook</a></li>
+					<li><a class="white-text caps" href="">Twitter</a></li>
+					<li><a class="white-text caps" href="">Dribbble</a></li>
+					<li><a class="white-text caps" href="mailto:career@disruptive.studio?subject=I Wanna Be Part of the Team">Career</a></li>
+				</ul>
+			</div>
+			<div id="copyright">
+				<p class="white-text italic playfair"><i>2018 Disruptive, LLC. All Rights Reserved.</i></p>
+			</div>
+		</footer>
 		<script type="text/javascript" src="../js/libraries.js"></script>
 	</body>
 </html>

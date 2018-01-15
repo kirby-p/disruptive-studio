@@ -19,7 +19,7 @@
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
-	<body class="black">
+	<body>
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<!-- <script type="text/javascript" src="../js/bin/materialize.min.js"></script> -->
@@ -32,52 +32,143 @@
 		<section class="case-hero parallax-container">
 			<div class="parallax"><img src="../assets/img/bahaari_hero.jpg"></div>
 
-		<!-- Nav bar -->
-		<div class="navbar-fixed">
-			<nav>
-				<div class="nav-wrapper">
-					<img id="home-mob" class="brand-logo hide-on-large-only" src="../assets/img/icon_logo.png">
-					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-					<ul id="nav-mobile" class="flex hide-on-med-and-down">
-						<!-- Home Link -->
-							<li><a href="../index.html" id="home"><img src="../assets/img/icon_logo.png"></a></li>
-							<li><a href="../index.html#page1/slide2" id="work-nav" class="white-text montserrat caps">WORK</a></li>
-							<li><a href="../index.html#page1/slide6" class="white-text montserrat caps">HIRE US</a></li>
-					</ul>
+			<!-- Nav bar -->
+			<div class="navbar-fixed">
+				<nav>
+					<div class="nav-wrapper">
+						<img id="home-mob" class="brand-logo hide-on-large-only" src="../assets/img/icon_logo.png">
+						<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+						<ul id="nav-mobile" class="flex hide-on-med-and-down">
+							<!-- Home Link -->
+								<li><a href="../index.html" id="home"><img src="../assets/img/icon_logo.png"></a></li>
+								<li><a href="../index.html#page1/slide2" id="work-nav" class="white-text montserrat caps">WORK</a></li>
+								<li><a href="../index.html#page1/slide6" class="white-text montserrat caps">HIRE US</a></li>
+						</ul>
 
-					<!-- Mobile Menu -->
-					<ul class="side-nav" id="mobile-menu">
-						<li>
-							<img id="side-home" src="../assets/img/logo_mobile_dark.png">
-						</li>
-						<li>
-							<p id="work-nav" class="playfair white-text italic mobile-menu-items"><a href="../index.html">Work</a></p>
-						</li>
-						<li>
-							<p class="modal-trigger playfair white-text italic mobile-menu-items" href="#about">Rethink the Status Quo</p>
-						</li>
-						<li>
-							<p id="lets-talk-mobile" class="playfair white-text italic mobile-menu-items"><a href="../index.html#contact-slide">Let's Talk</a></p>
-						</li>
-						<li id="company-info-mobile">
-							<p class="white-text"><b>DISRUPTIVE, LLC</b></p>
-							<p><a href="tel: +1-407-505-5987">+1 (407) 505.5987</a></p>
-							<p><a href="mailto: hello@disruptive.studio">hello@disruptive.studio</a></p>
-						</li>
-						<li id="side-social">
-							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+						<!-- Mobile Menu -->
+						<ul class="side-nav" id="mobile-menu">
+							<li>
+								<img id="side-home" src="../assets/img/logo_mobile_dark.png">
+							</li>
+							<li>
+								<p id="work-nav" class="playfair white-text italic mobile-menu-items"><a href="../index.html#works">Work</a></p>
+							</li>
+							<li>
+								<p class="modal-trigger playfair white-text italic mobile-menu-items" href="#about">Rethink the Status Quo</p>
+							</li>
+							<li>
+								<p id="lets-talk-mobile" class="playfair white-text italic mobile-menu-items"><a href="../index.html#contact">Let's Talk</a></p>
+							</li>
+							<li id="company-info-mobile">
+								<p class="white-text"><b>DISRUPTIVE, LLC</b></p>
+								<p><a href="tel: +1-407-505-5987">+1 (407) 505.5987</a></p>
+								<p><a href="mailto: hello@disruptive.studio">hello@disruptive.studio</a></p>
+							</li>
+							<li id="side-social">
+								<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
 			<div id="bottom-nav" class="z10 fixed white-text abs-pos">
 				<p>Case Studies</p>
 			</div>
 			<div class="dead-center"><img src="../assets/img/bahaari_logo.png"></div>
 		</section>
+
+		<!-- About Us Modal -->
+		<div id="about" class="modal modal-fixed-footer appear-right">
+				<section id="about-top" class="z1">
+					<i class="fa fa-times modal-close white-text" aria-hidden="true"></i>
+					<img src="../assets/img/disruptive_logo_full.png">
+				</section>
+			<div class="modal-content">
+				<div class="content-wrapper">
+					<section id="about-1" class="flex we-section">
+						<div class="about-left">
+							<p class="white-text montserrat caps">WE ARE</p>
+							<div class="underline-short"></div>
+						</div>
+						<div class="about-right">					
+							<h2 class="white-text">We tell stories, create experiences, make businesses grow</h2>
+							<p class="white-text">We believe in turning heads and rethinking the status quo. Technology and business are changing rapidly–for the better, but many small businesses are struggling to adapt; we’ve seen our own industry pressured by an outdated agency structure ill-equipped to sustain its customers and employees. Our mission is to question the methods holding us all back, and make building a successful business easy again.</p>
+						</div>						
+					</section>
+					<section class="flex we-section">
+						<div class="about-left">
+							<p class="white-text montserrat caps">We do</p>
+							<div class="underline-short"></div>
+						</div>
+						<div class="about-right">					
+							<h2 class="white-text">We envision, we create, we build</h2>
+							<div class="row do-list">
+								<div class="col">
+									<p class="white-text caps">Branding</p>
+									<p class="white-text caps">Web and Mobile</p>
+								</div>
+								<div class="col">
+									<p class="white-text caps">Design</p>
+									<p class="white-text caps">Motion</p>
+								</div>
+								<div class="col">
+									<p class="white-text caps">Advertising</p>
+									<p class="white-text caps">Photography</p>
+								</div>
+								<div class="col">
+									<p class="white-text caps">Print</p>
+									<p class="white-text caps">Social Media</p>
+								</div>
+							</div>
+						</div>						
+					</section>
+					<section class="flex we-section">
+						<div class="about-left">
+							<p class="white-text montserrat caps">We build</p>
+							<div class="underline-short"></div>
+						</div>
+						<div class="about-right">					
+							<h2 class="white-text">This is how we roll</h2>
+							<p class="white-text">There isn’t a one-size-fits-all formula for success. wether you are a startup finding your feet or an established company, we shape our team around you. Because each client is unique, each assignment is measured against an individual set of objectives.</p>		
+							<p class="white-text numb-sect">1.</p>			
+							<h4 class="white-text">Partners</h4>
+							<p class="white-text">We believe in creating seamless partnerships with our clients. We listen to you.  We understand you and we work with you. We want to be the Ike to your Tina, the Robin to your Batman, the Starsky to your Hutch.</p>
+							<p class="white-text numb-sect">2.</p>			
+							<h4 class="white-text">Prototype</h4>
+							<p class="white-text">We analyze,  create prototypes, share a vision, and fine tune, adjust, again and again. </p>
+							<p class="white-text numb-sect">3.</p>			
+							<h4 class="white-text">Team</h4>
+							<p class="white-text">We know we don’t always nail it on the first try. and that’s actually a good thing. You have perspectives, we have expertise. We never work in isolation, and you are part of our reflection. Always.</p>
+							<p class="white-text numb-sect">4.</p>			
+							<h4 class="white-text">Delivery</h4>
+							<p class="white-text">So it looks great. Awesome. But does it work? We are a resilient, result-driven, detail-oriented bunch. Long story short, we put all we have on the line to make sure - It. Just. Works.</p>
+						</div>						
+					</section>
+					<section id="lets-talk-section" class="flex we-section">
+						<div class="about-left">
+						</div>
+						<div class="about-right" id="lets-talk">
+							<div id="contact-left">
+								<p>We REALLY think we should talk. So we created this giant box and used this extremely generic picture of people conversing drinking coffee to drive your attention to the link on the right that will get you to our contact form.</p>
+
+								<p>In fact, thinking about it, we have tables, and we drink coffee (probably too much). So maybe it’s not so generic after all. Maybe It just relates the tale of two people meeting for the first time and telling stories to each other, making plans to conquer the world and defining a new way to see success.</p>
+
+								<p>We actually like that a lot!</p>
+							</div>
+							<div id="contact-right">
+								<div>
+									<h2>No, but seriously</h2>
+									<h3 class="yellow-text caps">Let's Talk</h3>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
 		<section id="case-intro-section" class="">
 			<div class="z1 z-depth-4">
 				<p class="montserrat caps">Intro</p>
@@ -128,8 +219,8 @@
 		</section>
 		<section id="we-should-talk-section" class="white we-should-talk-bahaari">
 			<div class="flex dead-center align-items-center justify-end">
-				<p class="montserrat caps">We should talk</p>
-				<div class="underline-short"></div>
+				<p class="montserrat caps"><a href="../index.html#page1/slide6">We should talk</a></p>
+				<!-- <div class="underline-short"></div> -->
 			</div>
 		</section>
 		<section id="parallax-product" class="parallax-container">
@@ -140,7 +231,7 @@
 		<section class="white spacer">
 			
 		</section>
-		<section id="case-sites" class="black content-wrapper case-sites-bahaari">
+		<section id="case-sites" class="content-wrapper case-sites-bahaari">
 			<div class="flex">
 				<div class="z-depth-4">	
 				</div>
@@ -151,7 +242,7 @@
 				<p class="montserrat caps">
 					<a class="white-text" href="https://bahaari.com">Visit the site</a>
 				</p>
-				<div class="underline-short"></div>
+				<!-- <div class="underline-short"></div> -->
 			</div>
 			<div class="spacer"></div>
 		</section>
@@ -164,8 +255,10 @@
 						and let's get the ball rolling.</h2>
 					<p class="white-text" style="margin-bottom: 30px;">Whatever you need, we are looking forward to hear from you.<br>
 						<i>Yes, we have coffee!</i></p>
-					<p class="montserrat caps"><a class="white-text" href="#">Talk to us</a></p>
-					<div class="underline-short"></div>
+					<p class="montserrat caps">
+						<a class="white-text" href="../index.html#page1/slide6">Talk to us</a>
+					</p>
+					<!-- <div class="underline-short"></div> -->
 				</div>
 				<div id="contact-social">
 					<div>
@@ -196,6 +289,24 @@
 			</div>
 		</section>
 		<section class="spacer"></section>
+		<footer class="hide-on-tablet-and-mobile">
+			<div>
+				<img src="../assets/img/disruptive_logo_full.png">
+			</div>
+			<div id="footer-links" style="width: 50%;">
+				<ul>
+					<li><p class="yellow-text">&mdash;&mdash;&nbsp;&nbsp;</p></li>
+					<li><a class="white-text caps" href="../index.html#page1/slide6">Hire Us</a></li>
+					<li><a class="white-text caps" href="">Facebook</a></li>
+					<li><a class="white-text caps" href="">Twitter</a></li>
+					<li><a class="white-text caps" href="">Dribbble</a></li>
+					<li><a class="white-text caps" href="mailto:career@disruptive.studio?subject=I Wanna Be Part of the Team">Career</a></li>
+				</ul>
+			</div>
+			<div id="copyright">
+				<p class="white-text italic playfair"><i>2018 Disruptive, LLC. All Rights Reserved.</i></p>
+			</div>
+		</footer>
 		<script type="text/javascript" src="../js/libraries.js"></script>
 		<script type="text/javascript" src="../js/fullpage.js"></script>
 	</body>
