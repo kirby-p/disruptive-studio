@@ -55,14 +55,17 @@ a,
 	font-family: $montserrat;
 	font-weight: bold;
 	// color: $mid-yellow;
-	padding-bottom: 15px;
+	// padding-bottom: 15px;
 }
 
-a:not(.showcase-links):hover {
-	border-bottom: 2px solid $mid-yellow;
-    // box-shadow: 0 1px 0 0 $mid-yellow;
-}
+// a:not(.showcase-links):not(.slide-nav):hover {
+// 	border-bottom: 2px solid $mid-yellow;
+//     // box-shadow: 0 1px 0 0 $mid-yellow;
+// }
 
+.fa.white-text:hover {
+	color: #dark-yellow;
+}
 .italic {
 	font-style: italic;
 }
@@ -86,10 +89,13 @@ button:focus {
 .btn-large:hover {
 	background-color: $mid-yellow;
 }
-a.slide-nav {
+a.slide-nav,
+.vert a i {
 	color: white;
 }
-a.slide-nav:focus {
+a.slide-nav:focus,
+a.slide-nav:hover,
+.vert a i:hover {
 	color: $mid-yellow;
 }
 .montserrat {
@@ -102,6 +108,30 @@ a.slide-nav:focus {
 
 .caps {
 	text-transform: uppercase;
+}
+
+.link-hover {
+	position: relative;
+	text-decoration: none;
+}
+.link-hover:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: $mid-yellow;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+.link-hover:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .underline-short {
@@ -134,6 +164,7 @@ h3 {
 	font-family: $montserrat;
 	font-size: 18px;
 	line-height: 30px;
+	letter-spacing: 2px;
 }
 h4 {
 	font-family: $playfair;
@@ -144,6 +175,13 @@ p {
 	font-family: $montserrat;
 	font-size: 15px;
 	line-height: 30px;
+}
+a {
+	letter-spacing: 2px;
+
+	span {
+		letter-spacing: 0;
+	}
 }
 .text-shadow {
 	@include single-text-shadow;
@@ -166,6 +204,30 @@ p {
 	width: 50px;
 	line-height: 0.1em;
 	margin: 10px 0 20px;
+}
+
+// Dash animation
+.dash-line {
+	stroke:#fcc222;
+	stroke-width:2;
+}
+.dash-line.animate {
+	stroke-dasharray: 40;
+	stroke-dashoffset: 40;
+	animation: dash 3s ease infinite;		
+}
+
+
+@keyframes dash {
+  0% {
+  	stroke-dashoffset: 80;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+  	stroke-dashoffset: -80;
+  }
 }
 
 // Flexbox
@@ -237,9 +299,12 @@ video#video-bg {
 	color: white;
 }
 
+.case-slide-img {
+	box-shadow: 1px 1px 35px rgba(0,0,0,0.6);
+}
 // Navigation
 nav {
-	padding: 20px;
+	padding: 20px 60px;
 }
 
 #nav-mobile,
@@ -252,9 +317,15 @@ nav {
 #nav-mobile li a {
 	text-align: center;
 	// transition: all 0.2s;
+	font-size: 11px;
+	letter-spacing: 2px;
+	padding: 0;
 }
-#nav-mobile li a:hover {
-	@include shadow(2px, 2px, 2px, #222);
+// #nav-mobile li a:not(#home):hover {
+// 	@include shadow(2px, 2px, 2px, #222);
+// 	background-color: transparent;
+// }
+nav ul a:hover {
 	background-color: transparent;
 }
 
@@ -354,6 +425,11 @@ nav,
 .vert-text {
 	@include rot-trans(90, 50%, 50%);
 	@include transform-origin(100%);
+
+	p {
+		font-size: 11px;
+		letter-spacing: 2px;
+	}
 }
 
 #main-title {
@@ -792,6 +868,8 @@ footer {
     #footer-links {
     	width: 50%;
     	margin-top: 40px;
+    	font-size: 10px;
+    	letter-spacing: 2px;
 
     	ul {
 		    @include flexbox();
@@ -802,6 +880,7 @@ footer {
 
     #copyright {
      	margin-top: 40px;   	
+     	color: $light-gray;
     }
 }
 

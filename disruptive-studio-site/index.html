@@ -39,9 +39,9 @@
 					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="flex hide-on-med-and-down">
 						<!-- Home Link -->
-						<li><button id="home"><img src="assets/img/icon_logo.png"></button></li>
-						<li><button id="work-nav" class="white-text montserrat caps">WORK</button></li>
-						<li><button id="contact-nav" class="white-text montserrat caps">HIRE US</button></li>
+						<li><a id="home" class="link-hover"><img src="assets/img/icon_logo.png"></a></li>
+						<li><a id="work-nav" class="white-text montserrat caps link-hover">WORK</a></li>
+						<li><a id="contact-nav" class="white-text montserrat caps link-hover">HIRE US</a></li>
 					</ul>
 
 					<!-- Mobile Menu -->
@@ -64,9 +64,9 @@
 							<p><a href="mailto: hello@disruptive.studio">hello@disruptive.studio</a></p>
 						</li>
 						<li id="side-social">
-							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="https://www.facebook.com/disruptive.studio"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="https://twitter.com/disruptiveSTDO"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="https://www.instagram.com/disruptivestudio/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 						</li>
 					</ul>
 				</div>
@@ -75,21 +75,24 @@
 		<div class="hide-on-med-and-down side-navs left-nav z10">
 			<div class="flex vert">
 				<p class="white-text vert-text">&mdash;&mdash;&nbsp;&nbsp;</p>
-				<a href="#"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-twitter white-text" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-instagram white-text" aria-hidden="true"></i></a>
-				<a id="email-icon" href="mailto:design@disruptive.studio?subject=I Want to See More of Your Stuff"><i class="fa fa-envelope-o white-text" aria-hidden="true"></i></a>
+				<a href="https://www.facebook.com/disruptive.studio"><i class="fa fa-facebook " aria-hidden="true"></i></a>
+				<a href="https://twitter.com/disruptiveSTDO"><i class="fa fa-twitter " aria-hidden="true"></i></a>
+				<a href="https://www.instagram.com/disruptivestudio/"><i class="fa fa-instagram " aria-hidden="true"></i></a>
+				<a id="email-icon" href="mailto:design@disruptive.studio?subject=I Want to See More of Your Stuff"><i class="fa fa-envelope-o " aria-hidden="true"></i></a>
 			</div>
 		</div>
 		<div class="hide-on-med-and-down side-navs right-nav z10">
 			<div class="flex vert">
-				<a class="modal-trigger vert-text" href="#about"><p class="white-text caps">&mdash;&mdash;&nbsp;&nbsp;RETHINK THE STATUS QUO</p></a>
+				<a class="modal-trigger vert-text link-hover" href="#about"><p class="white-text caps"><span>&mdash;&mdash;</span>&nbsp;&nbsp;RETHINK THE STATUS QUO</p></a>
 			</div>
 		</div>
 		<div id="bottom-nav" class="z1 fixed">
 			<div>
 				<!-- <a id="home-nav" href="#">HOME</a> -->
-				<p class="white-text">&mdash;&mdash;</p>
+				<!-- <p class="white-text">&mdash;&mdash;</p> -->
+				<svg class="dash-line animate" height="24" width="40">
+				  <line x1="0" y1="12" x2="40" y2="12" />
+				</svg>
 				<a id="bahaari-nav" class="slide-nav" href="#!">1.</a>
 				<a id="iswim-nav" class="slide-nav" href="#!">2.</a>
 				<a id="harvest-nav" class="slide-nav" href="#!">3.</a>
@@ -211,9 +214,9 @@
 					<div class="dead-center showcase-imgs">
 						<a class="showcase-links" href="case-studies/bahaari">
 							<div class="next-proj-bahaari case-slide-img">
-								<img src="assets/img/bahaari_logo.png">
-							<p class="hide-on-desktop" style="margin-top: 30px;">1.  BAHAARI<br></p>
-							<p class="hide-on-desktop"><i>Logo, Print, Web</i></p>
+								<img class="hide-on-desktop" src="assets/img/bahaari_logo.png">
+							<p style="margin-top: 30px;">1.  BAHAARI<br></p>
+							<p><i>Logo, Print, Web</i></p>
 							</div>
 						</a>
 						<p class="hide-on-tablet-and-mobile">1.  BAHAARI<br></p>
@@ -224,9 +227,9 @@
 					<div class="dead-center showcase-imgs">
 						<a class="showcase-links" href="case-studies/iswim">
 							<div class="next-proj-iswim case-slide-img">	
-								<img src="assets/img/iswim_logo.png">
-								<p class="hide-on-desktop" style="margin-top: 30px;">2.  ISWIM<br></p>
-								<p class="hide-on-desktop"><i>Logo, Print, Web</i></p>
+								<img class="hide-on-desktop" src="assets/img/iswim_logo.png">
+								<p style="margin-top: 30px;">2.  ISWIM<br></p>
+								<p><i>Logo, Print, Web</i></p>
 							</div>
 						</a>
 						<p class="hide-on-tablet-and-mobile">2.  ISWIM<br></p>
@@ -237,9 +240,9 @@
 					<div class="dead-center showcase-imgs">
 						<a class="showcase-links" href="case-studies/harvest">
 							<div class="next-proj-harvest case-slide-img">	
-								<img src="assets/img/harvest_logo.png">
-								<p class="hide-on-desktop" style="margin-top: 30px;">3.  HARVEST<br></p>
-								<p class="hide-on-desktop"><i>Logo, Print</i></p>
+								<img class="hide-on-desktop" src="assets/img/harvest_logo.png">
+								<p style="margin-top: 30px;">3.  HARVEST<br></p>
+								<p><i>Logo, Print</i></p>
 							</div>
 						</a>
 						<p class="hide-on-tablet-and-mobile" >3.  HARVEST<br></p>
@@ -250,9 +253,9 @@
 					<div class="dead-center showcase-imgs">
 						<a class="showcase-links" href="case-studies/appuntamento">
 							<div class="next-proj-appunt case-slide-img">	
-								<img src="assets/img/appuntamento_logo.png">
-								<p class="hide-on-desktop" style="margin-top: 30px;">4.  APPUNTAMENTO<br></p>
-								<p class="hide-on-desktop"><i>Logo, Print</i></p>
+								<img class="hide-on-desktop" src="assets/img/appuntamento_logo.png">
+								<p style="margin-top: 30px;">4.  APPUNTAMENTO<br></p>
+								<p><i>Logo, Print</i></p>
 							</div>
 						</a>
 						<p class="hide-on-tablet-and-mobile" >4.  APPUNTAMENTO<br></p>
