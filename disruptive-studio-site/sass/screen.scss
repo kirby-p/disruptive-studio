@@ -65,6 +65,8 @@ a,
 
 .fa.white-text:hover {
 	color: #dark-yellow;
+    -webkit-transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
 }
 .italic {
 	font-style: italic;
@@ -908,6 +910,7 @@ footer {
 	nav {
 		height: inherit;
 		background-color: black !important;
+		padding: 20px 10px;
 
 		.brand-logo {
 			left: 90%;
@@ -998,7 +1001,8 @@ footer {
 	    display: flex;
 	    flex-direction: column;
 	    height: 300px;
-
+    	@include align-items(left);
+    	padding-left: 30px;
 	}
 	#lets-talk-section div.about-left {
 		width: 0;
