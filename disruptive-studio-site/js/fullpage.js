@@ -14,7 +14,8 @@ $(document).ready(function() {
 	    // Do fullpage.js on Desktop only
 	    $('#fullpage').fullpage({
 	    	anchors:['page1'],
-	    	controlArrows: false
+	    	controlArrows: false,
+	    	scrollOverflow: true
 	    });
 	    $('#home, #home-mob, #side-home').click(function() {
 			$.fn.fullpage.moveTo('page1', 0);

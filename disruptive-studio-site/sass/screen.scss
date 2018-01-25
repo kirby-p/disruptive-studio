@@ -857,6 +857,24 @@ nav,
 	    // transition: all 0.2s;
 	}
 }
+// Map and Locations - Contact Us Page
+#map-row {
+	display: flex;
+	flex-direction: row;
+}
+#florida-map,
+#locations
+{
+    height: 800px;
+    width: 100%;
+    background-position: center;
+}
+#florida-map {
+    background-image: url(../assets/img/map.jpg);
+}
+#locations {
+    background-image: url(../assets/img/contact_details.jpg);
+}
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid $mid-yellow;
     box-shadow: none;
