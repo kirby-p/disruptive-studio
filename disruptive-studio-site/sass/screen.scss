@@ -135,6 +135,9 @@ a.slide-nav:hover,
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+.black-link-hover.link-hover:before {
+	background-color: black;
+}
 #nav-mobile .link-hover:before {
 	bottom: 15px;
 }
@@ -865,7 +868,7 @@ nav,
 #florida-map,
 #locations
 {
-    height: 800px;
+    height: 600px;
     width: 100%;
     background-position: center;
 }
@@ -874,6 +877,29 @@ nav,
 }
 #locations {
     background-image: url(../assets/img/contact_details.jpg);
+    text-align: center;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+
+    #locations-title {
+	    margin-bottom: 100px;
+    }
+	#cities {
+		@include flexbox();
+		@include justify-content(space-around);
+		@include align-items(center);
+		height: 80px;
+	    margin-bottom: 100px;
+
+		div {
+			width: 100%;
+		}
+
+		#orlando-info {
+			border-right: 2px solid black;
+		}
+	}
 }
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid $mid-yellow;
