@@ -2645,7 +2645,7 @@
 
 /* line 393, ../sass/components/_color.scss */
 .black-text {
-  color: #000000 !important;
+  color: #000000;
 }
 
 /* line 390, ../sass/components/_color.scss */
@@ -2655,7 +2655,7 @@
 
 /* line 393, ../sass/components/_color.scss */
 .white-text {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
 }
 
 /* line 390, ../sass/components/_color.scss */
@@ -2665,7 +2665,7 @@
 
 /* line 393, ../sass/components/_color.scss */
 .transparent-text {
-  color: transparent !important;
+  color: transparent;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */

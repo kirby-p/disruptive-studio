@@ -64,7 +64,7 @@ a,
 // }
 
 .fa.white-text:hover {
-	color: #dark-yellow;
+	color: $dark-yellow;
     -webkit-transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
     transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
 }
@@ -121,7 +121,7 @@ a.slide-nav:hover,
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: -2px;
+    bottom: -5px;
     left: 0;
     background-color: $mid-yellow;
     visibility: hidden;
@@ -135,7 +135,9 @@ a.slide-nav:hover,
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
-
+#nav-mobile .link-hover:before {
+	bottom: 15px;
+}
 .underline-short {
 	border-top: 2px solid $mid-yellow;
 	width: 50px;
@@ -198,6 +200,9 @@ a {
 // .do-list .col.s3 {
 // 	text-align: center;
 // }
+.white-text.numb-sect {
+	margin-bottom: 50px;
+}
 .do-list {
 	@include flexbox();
 	@include justify-content(space-between);
@@ -387,6 +392,11 @@ nav,
     align-items: center;
     top: 0;
     padding: 0 50px;
+
+    a {
+    	font-size: 11px;
+    	letter-spacing: 2px;
+    }
 }
 .side-navs i,
 .side-navs p,
@@ -470,13 +480,14 @@ nav,
 }
 
 #about {
-	width: 100%;
-	height: 100vh;
-	max-height: none;
-	top: 0 !important;
+	// width: 100%;
+	// height: 100vh;
+	// max-height: none;
+	// top: 0 !important;
 	background-color: black;
     background-image: url(../assets/img/about_hero.jpg);
     background-size: cover;
+    background-attachment: fixed;
 
 }
 .modal .modal-content {
@@ -500,6 +511,10 @@ nav,
 }
 .we-section {
 	margin-bottom: 100px;
+}
+#lets-talk-section {
+	margin-bottom: 0;
+	padding-bottom: 100px;
 }
 #lets-talk {
 	background-image: url(../assets/img/contact_box.jpg);
@@ -595,11 +610,11 @@ nav,
 	width: 100%;
 }
 #case-info div.content-wrapper {
-	justify-content: space-between; 
+	justify-content: space-around; 
 	padding: 50px 0 200px;
 }
 #case-info div.content-wrapper div {
-	width: 30%; 
+	width: 27%; 
 	text-align: justify;
 }
 #case-imgs.case-imgs-bahaari {
@@ -770,13 +785,6 @@ nav,
 		padding-bottom: 0;
 
 	}
-
-	a:hover {
-		// color: $mid-yellow;
-		// text-shadow: 2px 2px 2px black;
-		border-bottom: 2px solid $mid-yellow;
-	    // box-shadow: 0 1px 0 0 $mid-yellow;
-	}
 }
 #next-project-img,
 .case-slide-img {
@@ -840,7 +848,6 @@ nav,
 	button {
 		background-color: transparent;
 		border: none;
-	    border-bottom: 2px solid transparent;
 	    text-transform: uppercase;
 	    color: $mid-yellow;
 	    font-weight: bold;
@@ -848,10 +855,6 @@ nav,
 	    width: 100px;
 	    text-align: center;
 	    // transition: all 0.2s;
-	}
-	button:hover {
-		border-bottom: 2px solid $mid-yellow;
-	    // box-shadow: 0 1px 0 0 $mid-yellow;
 	}
 }
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
@@ -1158,8 +1161,14 @@ footer {
 		font-size: 30px;
 		line-height: 45px;
 	}
+	#about {
+		padding-top: 120px;
+	}
 	#about-1 {
 		padding-top: 0;
+	}
+	.about-right h2 {
+	    margin-top: 0;
 	}
 	.side-navs {
 		padding: 0;
@@ -1243,8 +1252,9 @@ footer {
 			width: 100%;
 		}
 	}
+	#contact-form,
 	#contact-form input {
-		width: 100px;
+		width: 100%;
 	}
 	#next-project-text,
 	#next-project-img {

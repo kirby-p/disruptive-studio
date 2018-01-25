@@ -18,6 +18,7 @@
 
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
 	</head>
 	<body>
 		<!--Import jQuery before materialize.js-->
@@ -38,9 +39,9 @@
 					<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="flex hide-on-med-and-down">
 						<!-- Home Link -->
-						<li><button id="home"><img src="assets/img/icon_logo.png"></button></li>
-						<li><button id="work-nav" class="white-text montserrat caps">WORK</button></li>
-						<li><button id="contact-nav" class="white-text montserrat caps">HIRE US</button></li>
+							<li><a href="index.html" id="home" class="text-shadow"><img src="assets/img/icon_logo.png"></a></li>
+							<li><a href="index.html#page1/slide2" id="work-nav" class="white-text montserrat caps text-shadow link-hover">WORK</a></li>
+							<li><a href="index.html#page1/slide6" class="white-text montserrat caps text-shadow link-hover">HIRE US</a></li>
 					</ul>
 
 					<!-- Mobile Menu -->
@@ -49,13 +50,13 @@
 							<img id="side-home" src="assets/img/logo_mobile_dark.png">
 						</li>
 						<li>
-							<p id="work-nav" class="playfair white-text italic mobile-menu-items">Work</p>
+							<p id="work-nav" class="white-text italic mobile-menu-items"><a class="playfair" href="index.html#works">Work</a></p>
 						</li>
 						<li>
-							<p class="modal-trigger playfair white-text italic mobile-menu-items" href="#about">Rethink the Status Quo</p>
+							<p class="white-text italic mobile-menu-items"><a class="playfair" href="about-us.html">Rethink the Status Quo</a></p>
 						</li>
 						<li>
-							<p id="lets-talk-mobile" class="playfair white-text italic mobile-menu-items">Let's Talk</p>
+							<p id="lets-talk-mobile" class="white-text italic mobile-menu-items"><a class="playfair" href="index.html#contact">Let's Talk</a></p>
 						</li>
 						<li id="company-info-mobile">
 							<p class="white-text"><b>DISRUPTIVE, LLC</b></p>
@@ -63,15 +64,15 @@
 							<p><a href="mailto: hello@disruptive.studio">hello@disruptive.studio</a></p>
 						</li>
 						<li id="side-social">
-							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="https://www.facebook.com/disruptive.studio" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="https://twitter.com/disruptiveSTDO" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="https://www.instagram.com/disruptivestudio" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</div>
-		<div class="hide-on-med-and-down side-navs left-nav z10">
+		<!-- <div class="hide-on-med-and-down side-navs left-nav z10">
 			<div class="flex vert">
 				<p class="white-text vert-text">&mdash;&mdash;&nbsp;&nbsp;</p>
 				<a href="#"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>
@@ -84,12 +85,11 @@
 			<div class="flex vert">
 				<a class="modal-trigger vert-text" href="#about"><p class="white-text caps">&mdash;&mdash;&nbsp;&nbsp;RETHINK THE STATUS QUO</p></a>
 			</div>
-		</div>
+		</div> -->
 
 
 		<!-- About Us Modal -->
-		<div id="about" class=" modal-fixed-footer appear-right">
-			<div class="modal-content">
+			<div id="about">
 				<div class="content-wrapper">
 					<section id="about-1" class="flex we-section">
 						<div class="about-left">
@@ -164,15 +164,34 @@
 							<div id="contact-right">
 								<div>
 									<h2>No, but seriously</h2>
-									<h3 class="yellow-text caps">Let's Talk</h3>
+									<h3 class="caps"><a href="index.html#page1/slide6" class="link-hover yellow-text ">Let's Talk</a></h3>
 								</div>
 							</div>
 						</div>
 					</section>
 				</div>
 			</div>
-		</div>
-
+		<!-- Footer -->
+		<footer class="hide-on-tablet-and-mobile">
+			<div>
+				<a href="index.html"><img src="assets/img/disruptive_logo_full.png"></a>
+			</div>
+			<div id="footer-links" style="width: 50%;">
+				<ul>
+					<li><svg class="dash-line" height="24" width="40">
+				  <line x1="0" y1="12" x2="40" y2="12" />
+				</svg></li>
+					<li><a class="white-text caps link-hover" href="index.html#page1/slide6">Hire Us</a></li>
+					<li><a class="white-text caps link-hover" href="https://www.facebook.com/disruptive.studio" target="_blank">Facebook</a></li>
+					<li><a class="white-text caps link-hover" href="https://twitter.com/disruptiveSTDO" target="_blank">Twitter</a></li>
+					<li><a class="white-text caps link-hover" href="https://dribbble.com/disruptiveSTDO" target="_blank">Dribbble</a></li>
+					<li><a class="white-text caps link-hover" href="mailto:career@disruptive.studio?subject=I Wanna Be Part of the Team">Career</a></li>
+				</ul>
+			</div>
+			<div id="copyright">
+				<p class="italic playfair"><i>2018 Disruptive, LLC. All Rights Reserved.</i></p>
+			</div>
+		</footer>
 
 		<script type="text/javascript" src="js/libraries.js"></script>
 		<script type="text/javascript" src="js/fullpage.js"></script>
