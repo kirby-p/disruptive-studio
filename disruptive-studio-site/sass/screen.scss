@@ -657,7 +657,16 @@ nav,
 	background-image: url(../assets/img/appuntamento_background.jpg);
 }
 #contact-slide {
-	background-image: url(../assets/img/contact_hero.jpg);	
+	background-image: url(../assets/img/contact-hero-alt.jpg);	
+
+	.showcase-imgs {
+		width: 60%;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin: 0;
+	}
 }
 .case-imgs-bahaari .content-wrapper div:first-child {
 	background-image: url(../assets/img/bahaari_buscard.jpg);
@@ -832,17 +841,28 @@ nav,
 		@include flexbox();
 		@include flex-direction(row);
 		@include align-items(center);
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 	}
 	p {
 		margin: 0;
+		font-size: 14px;
 	}
 	input {
 		width: 150px; 
 		margin: 0 10px;
 		height: 20px;
 		color: white;
+		font-family: $playfair;
+		font-style: italic;
 	}
+}
+#projectSelect {
+    display: block;
+    width: 120px;
+    margin: 0 10px;
+    height: 30px;
+    font-family: 'Playfair';
+    font-style: italic;
 }
 #contact-submit {
 	@include justify-content(center);
@@ -863,34 +883,37 @@ nav,
 // Map and Locations - Contact Us Page
 #map-row {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	width: 40%;
 }
 #florida-map,
 #locations
 {
-    height: 600px;
+    // height: 800px;
     width: 100%;
     background-position: center;
 }
 #florida-map {
-    background-image: url(../assets/img/map.jpg);
+    background-image: url(../assets/img/map-alt.jpg);
+    height: 60vh;
 }
 #locations {
-    background-image: url(../assets/img/contact_details.jpg);
+    background-image: url(../assets/img/contact-details-alt.jpg);
     text-align: center;
     @include flexbox();
     @include flex-direction(column);
     @include justify-content(center);
+    height: 40vh;
 
     #locations-title {
-	    margin-bottom: 100px;
+	    // margin-bottom: 100px;
     }
 	#cities {
 		@include flexbox();
 		@include justify-content(space-around);
 		@include align-items(center);
 		height: 80px;
-	    margin-bottom: 100px;
+	    // margin-bottom: 100px;
 
 		div {
 			width: 100%;
@@ -900,6 +923,37 @@ nav,
 			border-right: 2px solid black;
 		}
 	}
+}
+
+#budget-slider {
+	@include flex-direction(column);
+
+	#budget-list {
+		@include flex-direction(row);
+		font-size: 10px;
+		@include justify-content(space-between);
+		width: 100%;
+
+		li {
+			width: 20%;
+			@include justify-content(center);
+			@include flexbox();
+		}
+
+
+	}
+}
+hr.slide-border {
+	border-color: $mid-yellow;
+	width: 20%;
+	margin-left: 0;
+	transition: .3s all;
+}
+hr.slide-bg {
+	position: relative;
+    bottom: 10px;
+    z-index: -1;
+    border: 1px solid $light-gray;
 }
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid $mid-yellow;
@@ -1045,8 +1099,8 @@ footer {
 	}
 	.case-slide-img {
 		width: 100vw;
-	    display: flex;
-	    flex-direction: column;
+		@include flexbox();
+		@include flex-direction(column);
 	    height: 300px;
     	@include align-items(left);
     	padding-left: 30px;
